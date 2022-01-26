@@ -1,54 +1,41 @@
-<style lang="less" scoped>
+<style lang="less">
 @import "./lottery";
-.lottery__box {
+.lottery__box--list {
   display: inline-block;
 }
-.lottery {
-  width: 330px;
-  padding-left: 10px;
-  padding-top: 10px;
+.lottery__list {
   overflow: hidden;
-}
-.lottery_item {
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-.float_left {
-  float: left;
-}
-.float_right {
-  float: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.lottery_btn {
+.lottery__btn {
   width: 100%;
-  margin-top: 0.3rem;
+  display: flex;
+  justify-content: center;
 }
 </style>
 <template>
-  <div class="lottery__box">
-    <div class="lottery" :style="cLotteryStyle">
+  <div class="lottery__box--list">
+    <div :class="['lottery__list', boxClass]">
       <lottery-item
-        :style="[LotteryItemStyle, itemStyle]"
+        :class="itemClass"
         :isAct="index === listIndex"
-        :itemCurClass="itemCurClass"
-        :size="itemSize"
+        :itemActClass="itemActClass"
         :image="item.image"
-        :class="['lottery_item', 'float_left']"
         v-for="(item, index) in luckyList"
         :key="index"
         :label="item.label"
-        :unit="unit"
-        :vwSize="vwSize"
+        :style="[{ marginBottom: index > 5 ? 0 : false }]"
       ></lottery-item>
     </div>
-    <div class="lottery_btn lottery_flex-center">
+    <div class="lottery__btn">
       <!-- 按钮 -->
       <lottery-go
         @click.native="onsubmit"
-        :style="[LotteryItemStyle, btnStyle]"
-        :size="itemSize"
-        :class="['lottery_item', 'float_right', 'lottery_btn-btn', btnClass]"
+        :label="btnText"
+        :class="[btnClass, 'list']"
       ></lottery-go>
     </div>
   </div>
@@ -72,28 +59,22 @@ export default {
       if (this.list && this.list.length) {
         list = JSON.parse(JSON.stringify(this.list));
       } else {
-        console.error("????????list???Array");
+        console.error("入参 list 应该为数组");
       }
       return list;
     },
     cLotteryStyle() {
-      let pad = this.pad + "px";
-      let size = 3 * (this.itemSize + this.pad) + "px";
+      let style = {};
+      if (this.width) {
+        let size = this.width + "px";
 
-      if (this.unit === "rem") {
-        pad = this.pad / 100 + "rem";
-        size = (3 * (this.itemSize + this.pad)) / 100 + "rem";
-      } else if (this.unit === "vw") {
-        pad = (this.pad / this.vwSize) * 100 + "vw";
-        radius = ((3 * (this.itemSize + this.pad)) / this.vwSize) * 100 + "vw";
+        if (this.unit === "rem") {
+          size = this.width / 100 + "rem";
+        } else if (this.unit === "vw") {
+          size = (this.width / this.vwSize) * 100 + "vw";
+        }
+        style["width"] = size;
       }
-
-      let style = {
-        paddingLeft: pad,
-        paddingTop: pad,
-        width: size,
-        backgroundColor: this.lotteryBg,
-      };
       if (
         Object.prototype.toString.call(this.lotteryStyle) === "[object Object]"
       ) {

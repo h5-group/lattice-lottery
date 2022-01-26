@@ -1,7 +1,7 @@
-<style lang="less" scoped>
-.zh_lottery {
-  width: 330px;
-  background-color: #cc2510;
+<style lang="less">
+@import "./lottery";
+.lottery__box--grid {
+  display: inline-block;
 }
 .lottery__row {
   display: flex;
@@ -10,88 +10,59 @@
 .lottery__row.right {
   flex-direction: row-reverse;
 }
-.lottery_item {
-  margin-bottom: 10px;
-}
-.float_left {
-  float: left;
-}
-.float_right {
-  float: right;
-}
 </style>
 <template>
-  <div class="zh_lottery" :style="cLotteryStyle">
-    <div class="lottery__row">
-      <lottery-item
-        :style="[LotteryItemStyle, itemStyle]"
-        :isAct="index === listIndex"
-        :itemCurClass="itemCurClass"
-        :size="itemSize"
-        :image="item.image"
-        :class="['lottery_item', 'float_left']"
-        v-for="(item, index) in luckyList.slice(0, 3)"
-        :key="index"
-        :label="item.label"
-        :imageSize="lotteryImageSize"
-        :unit="unit"
-        :vwSize="vwSize"
-      ></lottery-item>
-    </div>
-    <div class="lottery__row right">
-      <lottery-item
-        :style="[LotteryItemStyle, itemStyle]"
-        :isAct="index + 3 === listIndex"
-        :itemCurClass="itemCurClass"
-        :size="itemSize"
-        :image="item.image"
-        :class="['lottery_item', 'float_right']"
-        v-for="(item, index) in luckyList.slice(3, 4)"
-        :key="index + 3"
-        :label="item.label"
-        :imageSize="lotteryImageSize"
-        :unit="unit"
-        :vwSize="vwSize"
-      ></lottery-item>
-      <!-- 按钮 -->
-      <lottery-go
-        @click.native="onsubmit"
-        :style="[LotteryItemStyle, btnStyle]"
-        :size="itemSize"
-        :unit="unit"
-        :vwSize="vwSize"
-        :class="['lottery_item', 'float_right', btnClass]"
-      ></lottery-go>
-      <lottery-item
-        :style="[LotteryItemStyle, itemStyle]"
-        :isAct="index + 7 === listIndex"
-        :itemCurClass="itemCurClass"
-        :class="['lottery_item', 'float_right']"
-        :image="item.image"
-        :size="itemSize"
-        v-for="(item, index) in luckyList.slice(-1)"
-        :key="index + 7"
-        :label="item.label"
-        :imageSize="lotteryImageSize"
-        :unit="unit"
-        :vwSize="vwSize"
-      ></lottery-item>
-    </div>
-    <div class="lottery__row right">
-      <lottery-item
-        :style="[LotteryItemStyle, itemStyle, { marginBottom: 0 }]"
-        :isAct="index + 4 === listIndex"
-        :itemCurClass="itemCurClass"
-        :class="['lottery_item', 'float_right']"
-        :image="item.image"
-        :size="itemSize"
-        v-for="(item, index) in luckyList.slice(4, 7)"
-        :key="index + 4"
-        :label="item.label"
-        :imageSize="lotteryImageSize"
-        :unit="unit"
-        :vwSize="vwSize"
-      ></lottery-item>
+  <div class="lottery__box--grid">
+    <div :class="boxClass">
+      <div class="lottery__row">
+        <lottery-item
+          :isAct="index === listIndex"
+          :itemActClass="itemActClass"
+          :image="item.image"
+          :class="itemClass"
+          v-for="(item, index) in luckyList.slice(0, 3)"
+          :key="index"
+          :label="item.label"
+        ></lottery-item>
+      </div>
+      <div class="lottery__row right">
+        <lottery-item
+          :isAct="index + 3 === listIndex"
+          :itemActClass="itemActClass"
+          :image="item.image"
+          :class="itemClass"
+          v-for="(item, index) in luckyList.slice(3, 4)"
+          :key="index + 3"
+          :label="item.label"
+        ></lottery-item>
+        <!-- 按钮 -->
+        <lottery-go
+          @click.native="onsubmit"
+          :label="btnText"
+          :class="btnClass"
+        ></lottery-go>
+        <lottery-item
+          :isAct="index + 7 === listIndex"
+          :itemActClass="itemActClass"
+          :image="item.image"
+          :class="itemClass"
+          v-for="(item, index) in luckyList.slice(-1)"
+          :key="index + 7"
+          :label="item.label"
+        ></lottery-item>
+      </div>
+      <div class="lottery__row right">
+        <lottery-item
+          :style="[{ marginBottom: 0 }]"
+          :isAct="index + 4 === listIndex"
+          :class="itemClass"
+          :itemActClass="itemActClass"
+          :image="item.image"
+          v-for="(item, index) in luckyList.slice(4, 7)"
+          :key="index + 4"
+          :label="item.label"
+        ></lottery-item>
+      </div>
     </div>
   </div>
 </template>
@@ -130,18 +101,17 @@ export default {
       return list;
     },
     cLotteryStyle() {
-      let size = this.width + "px";
+      let style = {};
+      if (this.width) {
+        let size = this.width + "px";
 
-      if (this.unit === "rem") {
-        size = this.width / 100 + "rem";
-      } else if (this.unit === "vw") {
-        size = (this.width / this.vwSize) * 100 + "vw";
+        if (this.unit === "rem") {
+          size = this.width / 100 + "rem";
+        } else if (this.unit === "vw") {
+          size = (this.width / this.vwSize) * 100 + "vw";
+        }
+        style["width"] = size;
       }
-      let style = {
-        width: size,
-        // height: size,
-        backgroundColor: this.lotteryBg,
-      };
       if (
         Object.prototype.toString.call(this.lotteryStyle) === "[object Object]"
       ) {

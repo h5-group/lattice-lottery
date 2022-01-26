@@ -1,8 +1,5 @@
-<style lang="less" scoped>
-@import "./lottery";
-.zh_item {
-  width: 100px;
-  height: 100px;
+<style lang="less">
+.prize__item {
   box-sizing: border-box;
   background-color: white;
   position: relative;
@@ -10,37 +7,27 @@
   line-height: 20px;
   transition: all 0.1s;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-shrink: 0;
 }
-.zh_item_act {
+.prize__item__mask {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(255, 182, 193, 0.6);
 }
-.zh_item_image {
+.prize__item__image {
   width: 60px;
   height: 60px;
 }
 </style>
 <template>
-  <div
-    :style="style"
-    :class="[
-      'zh_item',
-      'lottery_flex-center',
-      'lottery_column',
-      'lottery_shrink',
-      isAct ? itemCurClass : '',
-    ]"
-  >
-    <img
-      class="zh_item_image"
-      :style="itemImageStyle"
-      v-if="image"
-      :src="image"
-      alt=""
-    />
-    <div v-if="isAct" class="zh_item_act"></div>
+  <div :class="['prize__item', isAct ? itemActClass : '']">
+    <img class="prize__item__image" v-if="image" :src="image" alt="" />
+    <div v-if="isAct" class="prize__item__mask"></div>
     <span v-if="label">{{ label }}</span>
   </div>
 </template>
@@ -54,7 +41,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    itemCurClass: {
+    itemActClass: {
       type: String,
       default: "",
     },
@@ -64,47 +51,6 @@ export default {
     },
     image: {
       type: String,
-    },
-    size: {
-      type: Number,
-      default: 200,
-    },
-    imageSize: {
-      type: Number,
-      default: 50,
-    },
-    unit: {
-      type: String,
-      default: "px",
-    },
-    vwSize: {
-      type: [String, Number],
-      default: 750,
-    },
-  },
-  computed: {
-    style() {
-      let size = this.size + "px";
-      if (this.unit === "rem") size = this.size / 100 + "rem";
-      else if (this.unit === "vw")
-        size = (this.size / this.vwSize) * 100 + "vw";
-      let style = {
-        width: size,
-        height: size,
-      };
-      return style;
-    },
-    itemImageStyle() {
-      let size = this.imageSize + "px";
-      if (this.unit === "rem") size = this.imageSize / 100 + "rem";
-      else if (this.unit === "vw")
-        size = (this.size / this.vwSize) * 100 + "vw";
-
-      let style = {
-        width: size,
-        height: size,
-      };
-      return style;
     },
   },
 };

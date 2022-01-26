@@ -1,19 +1,17 @@
-<style lang="less" scoped>
-@import "./lottery";
-.item {
-  width: 100px;
-  height: 100px;
+<style lang="less">
+// @import "./lottery";
+.lottery__button {
   box-sizing: border-box;
-  background-color: #fad800;
-  color: #cc2510;
-  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-shrink: 0;
+  cursor: pointer;
 }
 </style>
 <template>
-  <div
-    :style="style"
-    class="item lottery_flex-center lottery_column lottery_shrink lottery_pointer"
-  >
+  <div class="lottery__button">
     <span v-if="label">{{ label }}</span>
   </div>
 </template>
@@ -26,31 +24,6 @@ export default {
     label: {
       type: String,
       default: "",
-    },
-    size: {
-      type: Number,
-      default: 200,
-    },
-    unit: {
-      type: String,
-      default: "px",
-    },
-    vwSize: {
-      type: [String, Number],
-      default: 750,
-    },
-  },
-  computed: {
-    style() {
-      let size = this.size + "px";
-      if (this.unit === "rem") size = this.size / 100 + "rem";
-      else if (this.unit === "vw")
-        size = (this.size / this.vwSize) * 100 + "vw";
-      let style = {
-        width: size,
-        height: size,
-      };
-      return style;
     },
   },
 };

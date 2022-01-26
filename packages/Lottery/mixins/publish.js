@@ -21,39 +21,27 @@ export default {
       type: Array,
       required: true,
     },
-    width: {
-      type: [String, Number],
-      default: 320,
+    boxClass: {
+      type: String,
+      default: 'lattice__lottery__box',
     },
-    //间隔，最大：20 单位：px
-    rowMargin: {
-      type: [String, Number],
-      default: 10,
+    itemClass: {
+      type: String,
+      default: 'lattice__lottery__item',
     },
-    //每个块的圆角值 允许 % 默认单位：px
-    radius: {
-      type: [String, Number],
-      default: 8,
-    },
-    // 中间按钮是否是圆形
     btnClass: {
       type: String,
-      default: '',
+      default: 'lattice__lottery__btn',
+    },
+    //选中块的样式
+    itemActClass: {
+      type: String,
+      default: 'lattice__lottery__actItem'
     },
     //转圈次数
     circleTimes: {
       type: Number,
       default: 3,
-    },
-    //是否采用前端随机抽奖-不安全-建议不使用
-    forLucky: {
-      type: Boolean,
-      default: false,
-    },
-    //每个块的大小 px最小值：100 rem最小值: 160
-    size: {
-      type: [String, Number],
-      default: 100,
     },
     //跳动的动画，默认 慢-快-慢
     velocity: {
@@ -63,48 +51,11 @@ export default {
         return ['invariance', 'speed'].indexOf(value) !== -1
       }
     },
-    lotteryStyle: {
-      type: Object,
-      default: function () {
-        return {}
-      }
-    },
-    //块的样式
-    itemStyle: {
-      type: Object,
-      default: function () {
-        return {}
-      }
-    },
-    itemCurClass: {
+    btnText: {
       type: String,
-      default: ''
-    },
-    //中间抽奖按钮的样式
-    btnStyle: {
-      type: Object,
-      default: function () {
-        return {}
-      }
-    },
-    lotteryBg: {
-      type: String,
-      default: '#CC2510'
-    },
-    lotteryImageSize: {
-      type: [String, Number],
-      default: 50,
-    },
-    unit: {
-      type: String,
-      default: 'px'
-    },
-    vwSize: {
-      type: [String, Number],
-      default: 750,
+      default: '抽奖',
     }
   },
-
   computed: {
     //间隔值
     pad() {

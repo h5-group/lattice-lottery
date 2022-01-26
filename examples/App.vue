@@ -1,19 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <demo />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Demo from "./components/demo.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Demo,
+  },
+  mounted() {
+    Math.rndNum = function (min, max) {
+      if (min > max) min = [max, (max = min)][0];
+      return this.floor(this.random() * (max - min + 1) + min);
+    };
+  },
+};
 </script>
 
 <style>

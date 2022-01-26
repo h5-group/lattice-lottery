@@ -1,8 +1,19 @@
-.lottery_flex{display: flex;}
-.lottery_flex-center{display: flex; justify-content: center; align-items: center;}
-.lottery_flex-between{display: flex; justify-content: space-between;}
-.lottery_column{flex-direction: column;}
-.lottery_shrink{flex-shrink: 0;}
-.lottery_wrap{flex-wrap: wrap;}
-
-.lottery_pointer{cursor: pointer;}
+.lattice__lottery__box {
+  width: 320px;
+}
+.lattice__lottery__item {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+.lattice__lottery__btn {
+  width: 100px;
+  height: 100px;
+  background-color: #fad800;
+  color: #cc2510;
+  font-size: 32px;
+  &.list {
+    margin-top: 24px;
+  }
+}
