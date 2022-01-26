@@ -62,20 +62,20 @@
     <!-- 自定义样式 -->
     <h1>自定义样式</h1>
     <lottery-grid
-      ref="mtLottery2"
+      ref="mtLottery3"
       @onend="onend"
       :list="list"
-      @onsubmit="request('mtLottery2')"
+      @onsubmit="request('mtLottery3')"
       class="mtLottery2"
     ></lottery-grid>
 
     <!-- 按钮在外 -->
     <h1>按钮在外</h1>
     <lottery-list
-      ref="mtLottery3"
+      ref="mtLottery4"
       @onend="onend"
       :list="list"
-      @onsubmit="request('mtLottery3')"
+      @onsubmit="request('mtLottery4')"
     ></lottery-list>
   </div>
   <!-- 
