@@ -19,7 +19,7 @@ module.exports = {
         link: '/demo/'
       }, {
         text: 'GitHub',
-        link: 'https://www.baidu.com'
+        link: 'https://github.com/h5-group/lattice-lottery'
       }
     ],
     sidebar: {
