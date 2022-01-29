@@ -56,36 +56,6 @@ export default {
       default: '抽奖',
     }
   },
-  computed: {
-    //间隔值
-    pad() {
-      return this.rowMargin
-    },
-    LotteryItemStyle() {
-
-      let mar = this.pad + 'px'
-      let radius = isNaN(Number(this.radius)) ? this.radius : this.radius + 'px'
-
-      if (this.unit === 'rem') {
-        mar = this.pad / 100 + 'rem'
-        radius = isNaN(Number(this.radius)) ? this.radius : this.radius / 100 + 'rem'
-      } else if (this.unit === 'vw') {
-        mar = this.pad / this.vwSize * 100 + 'vw'
-        radius = isNaN(Number(this.radius)) ? this.radius : this.radius / this.vwSize * 100 + 'vw'
-      }
-
-      let style = {
-        // marginRight: mar,
-        marginBottom: mar,
-        borderRadius: radius
-      }
-      return style
-    },
-    // 每个块的大小
-    itemSize() {
-      return this.size
-    }
-  },
   methods: {
     onsubmit() {
       this.$emit('onsubmit')

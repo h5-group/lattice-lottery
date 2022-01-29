@@ -8,9 +8,6 @@
     width: 100%;
     height: 100%;
   }
-  /deep/.lottery__button {
-    border-radius: 50%;
-  }
 
   /deep/.lattice__lottery__box {
     margin: 0 auto;
@@ -27,6 +24,7 @@
     width: 170px;
     height: 170px;
     border: 1px solid #ccc;
+    border-radius: 50%;
     &.list {
       margin-top: 30px;
     }
@@ -92,13 +90,15 @@ export default {
       //注意：list不满8个会自动补全8个，内容：谢谢参与，超过8个会截取前8个
       list: [
         {
-          image: logo,
+          label: "一等奖",
+          // image: logo,
         },
         {
           label: "二等奖",
         },
         {
-          image: logo,
+          label: "三等奖",
+          // image: logo,
         },
         {
           label: "四等奖",

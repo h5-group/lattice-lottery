@@ -100,25 +100,6 @@ export default {
       }
       return list;
     },
-    cLotteryStyle() {
-      let style = {};
-      if (this.width) {
-        let size = this.width + "px";
-
-        if (this.unit === "rem") {
-          size = this.width / 100 + "rem";
-        } else if (this.unit === "vw") {
-          size = (this.width / this.vwSize) * 100 + "vw";
-        }
-        style["width"] = size;
-      }
-      if (
-        Object.prototype.toString.call(this.lotteryStyle) === "[object Object]"
-      ) {
-        style = Object.assign(style, this.lotteryStyle);
-      }
-      return style;
-    },
   },
 };
 </script>
