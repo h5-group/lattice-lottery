@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-  base: '.',
+  base: '/lattice-lottery/',
   title: 'lattice-lottery',
   description: '基于Vue的九宫格抽奖组件',
   locales: {
