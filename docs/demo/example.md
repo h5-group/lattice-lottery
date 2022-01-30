@@ -142,6 +142,6 @@
 
 如果觉得对你有帮助，就给点个星星吧~
 
-[GitHub]([https://github.com/h5-group/lattice-lottery) →
+[GitHub](https://github.com/h5-group/lattice-lottery) →
 
 Think !
