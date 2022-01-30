@@ -2,8 +2,14 @@
   "name": "lattice-lottery",
   "version": "0.1.0",
   "description": "基于 Vue 的九宫格抽奖组件",
-  "main": "lib/lattice-lottery.umd.min.js",
+  "main": "./lib/lattice-lottery.umd.min.js",
   "private": false,
+  "files": [
+    "lib/*",
+    "README.md",
+    "packages/*",
+    "package.json"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

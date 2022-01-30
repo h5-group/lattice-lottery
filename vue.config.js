@@ -1,5 +1,6 @@
 module.exports = {
   lintOnSave: false,
+  crossorigin: 'anonymous',
   publicPath: './',
   pages: {
     index: {

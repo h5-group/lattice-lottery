@@ -1,7 +1,6 @@
 <style lang="less">
 .prize__item {
   box-sizing: border-box;
-  background-color: white;
   position: relative;
   font-size: 14px;
   line-height: 20px;

@@ -127,10 +127,14 @@ export default {
     };
   },
   methods: {
+    rndNum(min, max) {
+      if (min > max) min = [max, (max = min)][0];
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    },
     request(name) {
       //模拟抽奖请求
       setTimeout(() => {
-        let luckyIndex = Math.rndNum(0, 7);
+        let luckyIndex = this.rndNum(0, 7);
         console.log(luckyIndex);
         this.$refs[name].go(luckyIndex);
       }, 100);
