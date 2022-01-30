@@ -25,7 +25,7 @@ Vue.use(LatticeLottery)
 
 ## 使用
 
-参考Demo文档 [传送门](/demo)
+参考Demo文档 [传送门](/lattice-lottery/demo)
 
 ## 效果图
 

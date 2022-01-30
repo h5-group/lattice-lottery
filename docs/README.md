@@ -14,7 +14,7 @@ npm install lattice-lottery --save-dev
 # 注册 vue
 import Vue from 'vue'
 import LatticeLottery from 'lattice-lottery'
-import 'lattice-lottery.css'
+import 'lattice-lottery/lib/lattice-lottery.css'
 
 Vue.use(LatticeLottery)
 
