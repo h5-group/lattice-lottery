@@ -1,24 +1,29 @@
-# xfzh-lottery
+# lattice-lottery
 
-## Project setup
-```
-npm install
-```
+基于Vue的九宫格抽奖组件。
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+```sh
 
-### Compiles and minifies for production
-```
-npm run build
-```
+# 安装 sh
+npm install lattice-lottery --save-dev
 
-### Lints and fixes files
-```
-npm run lint
+# 注册 vue
+import Vue from 'vue'
+import LatticeLottery from 'lattice-lottery'
+import 'lattice-lottery/lib/lattice-lottery.css'
+
+Vue.use(LatticeLottery)
+
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## github
+
+[GitHub](https://github.com/h5-group/lattice-lottery) →
+
+Thanks for the star !
+
+## 文档
+
+[食用文档](https://h5-group.github.io/lattice-lottery/) →
+
+You're the best !

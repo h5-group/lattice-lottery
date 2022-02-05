@@ -131,7 +131,6 @@
     background-image: url('../.vuepress/public/images/example/btn.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-color: transparent;
   }
 </style>
 ```

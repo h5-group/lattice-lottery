@@ -17,7 +17,7 @@ npm install lattice-lottery --save-dev
 // main.js
 import Vue from 'vue'
 import LatticeLottery from 'lattice-lottery'
-import 'lattice-lottery.css'
+import 'lattice-lottery/lib/lattice-lottery.css'
 
 Vue.use(LatticeLottery)
 
@@ -31,8 +31,8 @@ Vue.use(LatticeLottery)
 
 lottery-grid
 
-![效果图 grid](../.vuepress/public/images/lattice_lottery_logo.png)
+<img src="../.vuepress/public/images/lattice_lottery_logo.png" style="width: 330px; height=330px" />
 
 lottery-list
 
-![效果图 list](../.vuepress/public/images/lottery_list.png)
+<img src="../.vuepress/public/images/lottery_list.png" style="width: 330px; height=460px" />

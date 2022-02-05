@@ -90,7 +90,7 @@ export default {
 如果style便签定义了 `scoped` 属性，需要再类名前加上 `/deep/`。
 
 ```css
-/* 没有声明 scoped 属性，不需要加 /deep/ */
+/* 如果没有声明 scoped 属性，不需要加 /deep/ */
 <style lang="less" scoped>
   /* 为了防止样式重叠 建议给组件加上自定义的class类名 */
   .lottery1 {
