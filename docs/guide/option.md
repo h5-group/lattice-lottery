@@ -136,4 +136,4 @@ export default {
 </style>
 ```
 
-还有疑问？那来看看demo吧~ [传送门](/demo)
+还有疑问？那来看看demo吧~ [传送门](/lattice-lottery/demo)
