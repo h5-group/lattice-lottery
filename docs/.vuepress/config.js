@@ -1,10 +1,11 @@
 const path = require('path')
+const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
   base: '/lattice-lottery/',
   title: 'lattice-lottery',
   description: '基于Vue的九宫格抽奖组件',
   head: [
-    [
+    isProd ? [
       'script',
       {},
       `
@@ -16,7 +17,7 @@ module.exports = {
           s.parentNode.insertBefore(hm, s);
         })();
       `
-    ]
+    ] : ''
   ],
   locales: {
     '/': {
