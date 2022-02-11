@@ -1,8 +1,24 @@
 const path = require('path')
+const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
   base: '/lattice-lottery/',
   title: 'lattice-lottery',
   description: '基于Vue的九宫格抽奖组件',
+  head: [
+    isProd ? [
+      'script',
+      {},
+      `
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?d98e51720ec70609a3d5998161b75bab";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+      `
+    ] : ''
+  ],
   locales: {
     '/': {
       lang: 'zh-CN',
