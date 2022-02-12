@@ -4,6 +4,7 @@
   "description": "基于 Vue 的九宫格抽奖组件",
   "main": "./lib/lattice-lottery.umd.min.js",
   "private": false,
+  "license": "MIT",
   "files": [
     "lib/*",
     "README.md",
