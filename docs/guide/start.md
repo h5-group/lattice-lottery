@@ -6,7 +6,7 @@
 
 ``` sh
 
-npm install lattice-lottery --save-dev
+npm install lattice-lottery --save
 
 ```
 
@@ -14,7 +14,7 @@ npm install lattice-lottery --save-dev
 
 ``` javascript
 
-// main.js
+// main.js 注意：目前只支持vue2
 import Vue from 'vue'
 import LatticeLottery from 'lattice-lottery'
 import 'lattice-lottery/lib/lattice-lottery.css'
