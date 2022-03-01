@@ -5,8 +5,6 @@ export default {
       luckyIndex: 0,
 
       baseSpeed: 300,
-      minSpeed: 100,
-      maxSpeed: 500,
       speed: 20,
 
       hasCircleTimes: 0,
@@ -20,23 +18,6 @@ export default {
     list: {
       type: Array,
       required: true,
-    },
-    boxClass: {
-      type: String,
-      default: 'lattice__lottery__box',
-    },
-    itemClass: {
-      type: String,
-      default: 'lattice__lottery__item',
-    },
-    btnClass: {
-      type: String,
-      default: 'lattice__lottery__btn',
-    },
-    //选中块的样式
-    itemActClass: {
-      type: String,
-      default: 'lattice__lottery__actItem'
     },
     //转圈次数
     circleTimes: {
@@ -64,10 +45,10 @@ export default {
       console.log('go')
 
       if (this.isMoving) {
-        console.error('您反复调用了抽奖动画go函数')
+        console.error('您重复调用了go()函数')
         this.$emit('onerror', {
           index: index,
-          message: '您反复调用了抽奖动画go函数'
+          message: '您重复调用了go()函数'
         })
         return
       }

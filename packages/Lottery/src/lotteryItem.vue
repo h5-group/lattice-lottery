@@ -24,7 +24,13 @@
 }
 </style>
 <template>
-  <div :class="['prize__item', isAct ? itemActClass : '']">
+  <div
+    :class="[
+      'prize__item',
+      'lattice__lottery__item',
+      isAct ? 'lattice__lottery__actItem' : '',
+    ]"
+  >
     <img class="prize__item__image" v-if="image" :src="image" alt="" />
     <div v-if="isAct" class="prize__item__mask"></div>
     <span v-if="label">{{ label }}</span>
@@ -32,17 +38,10 @@
 </template>
 <script>
 export default {
-  data() {
-    return {};
-  },
   props: {
     isAct: {
       type: Boolean,
       default: false,
-    },
-    itemActClass: {
-      type: String,
-      default: "",
     },
     label: {
       type: String,

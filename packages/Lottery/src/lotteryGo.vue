@@ -17,9 +17,6 @@
 </template>
 <script>
 export default {
-  data() {
-    return {};
-  },
   props: {
     label: {
       type: String,

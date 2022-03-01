@@ -76,14 +76,8 @@
       @onsubmit="request('mtLottery4')"
     ></lottery-list>
   </div>
-  <!-- 
-      boxClass="boxClass"
-      itemClass="itemClass"
-      btnClass="btnClass"
-    -->
 </template>
 <script>
-import logo from "../assets/logo.png";
 export default {
   data() {
     return {

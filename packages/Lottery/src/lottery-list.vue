@@ -18,11 +18,9 @@
 </style>
 <template>
   <div class="lottery__box--list">
-    <div :class="['lottery__list', boxClass]">
+    <div class="lottery__list lattice__lottery__box">
       <lottery-item
-        :class="itemClass"
         :isAct="index === listIndex"
-        :itemActClass="itemActClass"
         :image="item.image"
         v-for="(item, index) in luckyList"
         :key="index"
@@ -35,7 +33,7 @@
       <lottery-go
         @click.native="onsubmit"
         :label="btnText"
-        :class="[btnClass, 'list']"
+        class="lattice__lottery__btn list"
       ></lottery-go>
     </div>
   </div>
