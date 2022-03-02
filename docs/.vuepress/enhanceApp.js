@@ -1,5 +1,5 @@
-import '../../lib/lattice-lottery.css'
-import LatticeLottery from '../../lib/lattice-lottery.umd'
+import '../../vue2/lib/lattice-lottery.css'
+import LatticeLottery from '../../vue2/lib/lattice-lottery.umd.min'
 
 export default async ({
   Vue,

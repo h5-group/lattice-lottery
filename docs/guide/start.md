@@ -6,20 +6,43 @@
 
 ``` sh
 
+# vue2
 npm install lattice-lottery --save
+
+# vue3
+npm install lattice-lottery-plus --save
 
 ```
 
 ## 注册
 
+- vue2项目
+
 ``` javascript
 
-// main.js 注意：目前只支持vue2
+// vue2 main.js
 import Vue from 'vue'
 import LatticeLottery from 'lattice-lottery'
 import 'lattice-lottery/lib/lattice-lottery.css'
 
 Vue.use(LatticeLottery)
+
+```
+
+- vue3项目
+
+``` javascript
+
+// vue3 main.js
+import { createApp } from 'vue'
+import App from './App.vue'
+
+import LatticeLottery from 'lattice-lottery-plus'
+import 'lattice-lottery-plus/lib/lattice-lottery.css'
+
+const app = createApp(App);
+
+app.use(LatticeLottery)
 
 ```
 

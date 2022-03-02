@@ -33,9 +33,8 @@
         ></lottery-item>
         <!-- 按钮 -->
         <lottery-go
-          @click.native="onsubmit"
+          @onClick="onsubmit"
           :label="btnText"
-          class="lattice__lottery__btn"
         ></lottery-go>
         <lottery-item
           :isAct="index + 7 === listIndex"

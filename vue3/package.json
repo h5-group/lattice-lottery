@@ -1,0 +1,52 @@
+{
+  "name": "lattice-lottery-plus",
+  "version": "0.1.0",
+  "description": "基于 Vue3 的九宫格抽奖组件",
+  "main": "./lib/lattice-lottery.umd.min.js",
+  "private": false,
+  "license": "MIT",
+  "files": [
+    "lib/*",
+    "README.md",
+    "packages/*",
+    "package.json"
+  ],
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lib": "vue-cli-service build --target lib --filename lattice-lottery --name LatticeLottery --dest lib ../packages/index.js"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.15",
+    "@vue/cli-plugin-eslint": "~4.5.15",
+    "@vue/cli-service": "~4.5.15",
+    "@vue/compiler-sfc": "^3.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "less-loader": "^6.0.0",
+    "eslint-plugin-vue": "^7.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

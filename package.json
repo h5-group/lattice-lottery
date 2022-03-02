@@ -1,58 +1,35 @@
 {
   "name": "lattice-lottery",
-  "version": "0.1.1-1",
-  "description": "基于 Vue 的九宫格抽奖组件",
-  "main": "./lib/lattice-lottery.umd.min.js",
-  "private": false,
-  "license": "MIT",
-  "files": [
-    "lib/*",
-    "README.md",
-    "packages/*",
-    "package.json"
-  ],
+  "version": "1.0.0",
+  "description": "基于Vue的九宫格抽奖组件。",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lib": "vue-cli-service build --target lib --filename lattice-lottery --name LatticeLottery --dest lib packages/index.js",
+    "ii": "cnpm install && cd ./vue2 && cnpm install && cd ../vue3 && cnpm install",
+    "vue2": "cd ./vue2 && npm run serve",
+    "vue3": "cd ./vue3 && npm run serve",
+    "lib:vue2": "cd ./vue2 && npm run lib",
+    "lib:vue3": "cd ./vue3 && npm run lib",
+    "publish:vue2": "cd ./vue2 && npm version prerelease && npm publish",
+    "publish:vue3": "cd ./vue3 && npm version prerelease && npm publish",
     "docs:dev": "vuepress dev docs --temp .temp",
     "docs:build": "vuepress build docs"
   },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h5-group/lattice-lottery.git"
   },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/h5-group/lattice-lottery/issues"
+  },
+  "homepage": "https://github.com/h5-group/lattice-lottery#readme",
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "babel-eslint": "^10.1.0",
-    "css-loader": "^6.5.1",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "less-loader": "6.0.0",
-    "style-loader": "^3.3.1",
-    "vue-template-compiler": "^2.6.11",
+    "less-loader": "^6.0.0",
     "vuepress": "^1.9.7",
     "vuepress-plugin-demo-container": "^0.2.0"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  }
 }

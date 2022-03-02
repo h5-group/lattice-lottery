@@ -84,6 +84,7 @@
     },
   }
 </script>
+<!-- 请注意项目中是否使用了预处理 是否需要使用 ::v-deep -->
 <style>
   .lotteryDemo {
     width: 640px;

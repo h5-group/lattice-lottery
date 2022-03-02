@@ -1,5 +1,4 @@
 <style lang="less">
-// @import "./lottery";
 .lottery__button {
   box-sizing: border-box;
   display: flex;
@@ -11,7 +10,7 @@
 }
 </style>
 <template>
-  <div class="lottery__button">
+  <div @click="onClick" class="lottery__button lattice__lottery__btn">
     <span v-if="label">{{ label }}</span>
   </div>
 </template>
@@ -23,5 +22,10 @@ export default {
       default: "",
     },
   },
+  methods: {
+    onClick() {
+      this.$emit('onClick')
+    }
+  }
 };
 </script>

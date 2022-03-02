@@ -87,29 +87,31 @@ export default {
 
 ```
 
-如果style便签定义了 `scoped` 属性，需要再类名前加上 `/deep/`。
+如果style便签定义了 `scoped` 属性，需要再类名前加上 `::v-deep`。
+
+关于`::v-deep`的相关内容不详细介绍，自行查阅下相关知识点。
 
 ```css
-/* 如果没有声明 scoped 属性，不需要加 /deep/ */
+/* 如果没有声明 scoped 属性，不需要加 ::v-deep */
 <style lang="less" scoped>
   /* 为了防止样式重叠 建议给组件加上自定义的class类名 */
   .lottery1 {
     /* 奖品列表的蒙层，根据抽奖动画选中的位置被显示出来 */
-    /deep/.prize__item__mask {
+    ::v-deep .prize__item__mask {
       background-color: rgba(0, 0, 205, 0.6);
     }
     /* 奖品图样式 */
-    /deep/.prize__item__image {
+    ::v-deep .prize__item__image {
       width: 100%;
       height: 100%;
     }
     /* 九宫格组件样式 为了跟随羡慕的自适应方案 */
-    /deep/.lattice__lottery__box {
+    ::v-deep .lattice__lottery__box {
       margin: 0 auto;
       width: 560px;
     }
     /* 奖品块样式 为了跟随羡慕的自适应方案 */
-    /deep/.lattice__lottery__item {
+    ::v-deep .lattice__lottery__item {
       width: 170px;
       height: 170px;
       margin-bottom: 30px;
@@ -117,7 +119,7 @@ export default {
       font-size: 18px;
     }
     /* 抽奖按钮 */
-    /deep/.lattice__lottery__btn {
+    ::v-deep .lattice__lottery__btn {
       width: 170px;
       height: 170px;
       border: 1px solid #ccc;
@@ -128,7 +130,7 @@ export default {
       }
     }
     /* 抽奖动画处于选中状态的奖品块样式 */
-    /deep/.lattice__lottery__actItem {
+    ::v-deep .lattice__lottery__actItem {
       background-color: rebeccapurple;
       color: white;
     }

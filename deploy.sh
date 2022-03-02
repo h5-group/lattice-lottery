@@ -4,7 +4,7 @@
 set -e
 
 # 构建lib
-npm run lib
+npm run lib:vue2
 
 # 生成静态文件
 npm run docs:build

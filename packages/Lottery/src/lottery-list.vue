@@ -31,9 +31,9 @@
     <div class="lottery__btn">
       <!-- 按钮 -->
       <lottery-go
-        @click.native="onsubmit"
+        @onClick="onsubmit"
         :label="btnText"
-        class="lattice__lottery__btn list"
+        class="list"
       ></lottery-go>
     </div>
   </div>
