@@ -40,7 +40,7 @@ module.exports = {
     ],
     sidebar: {
       '/demo/': ['', 'lottery-list', 'example'],
-      '/guide/': ['', 'start', 'introduce', 'option'],
+      '/guide/': ['', 'start', 'introduce', 'option', 'contact'],
       '/': false,
     }
   },
