@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>lattice-lottery</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?d98e51720ec70609a3d5998161b75bab";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+      </script>
+    <meta name="description" content="基于Vue的九宫格抽奖组件">
+    
+    <link rel="preload" href="/lattice-lottery/assets/css/0.styles.2515485b.css" as="style"><link rel="preload" href="/lattice-lottery/assets/js/app.d91f411f.js" as="script"><link rel="preload" href="/lattice-lottery/assets/js/2.c2cd35c6.js" as="script"><link rel="preload" href="/lattice-lottery/assets/js/14.f3347319.js" as="script"><link rel="preload" href="/lattice-lottery/assets/js/4.a74a2175.js" as="script"><link rel="prefetch" href="/lattice-lottery/assets/js/10.7a77350e.js"><link rel="prefetch" href="/lattice-lottery/assets/js/11.f76804f9.js"><link rel="prefetch" href="/lattice-lottery/assets/js/12.9db28b23.js"><link rel="prefetch" href="/lattice-lottery/assets/js/13.73d715c7.js"><link rel="prefetch" href="/lattice-lottery/assets/js/15.099e43f4.js"><link rel="prefetch" href="/lattice-lottery/assets/js/16.5161aa4d.js"><link rel="prefetch" href="/lattice-lottery/assets/js/17.ba8d3256.js"><link rel="prefetch" href="/lattice-lottery/assets/js/3.6e184758.js"><link rel="prefetch" href="/lattice-lottery/assets/js/5.c0c0d164.js"><link rel="prefetch" href="/lattice-lottery/assets/js/6.b32f68cf.js"><link rel="prefetch" href="/lattice-lottery/assets/js/7.cb8dcf94.js"><link rel="prefetch" href="/lattice-lottery/assets/js/8.2ddb3402.js"><link rel="prefetch" href="/lattice-lottery/assets/js/9.d3d7c21a.js">
+    <link rel="stylesheet" href="/lattice-lottery/assets/css/0.styles.2515485b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/lattice-lottery/" aria-current="page" class="home-link router-link-exact-active router-link-active"><!----> <span class="site-name">lattice-lottery</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/lattice-lottery/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/lattice-lottery/demo/" class="nav-link">
+  Demo
+</a></div><div class="nav-item"><a href="https://github.com/h5-group/lattice-lottery" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/lattice-lottery/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/lattice-lottery/demo/" class="nav-link">
+  Demo
+</a></div><div class="nav-item"><a href="https://github.com/h5-group/lattice-lottery" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><div class="home" data-v-6e8e7eca><div class="home__logo" data-v-6e8e7eca></div> <div class="home__name" data-v-6e8e7eca>lattice-lottery</div> <div class="home__desc" data-v-6e8e7eca>基于Vue的九宫格抽奖组件</div> <a href="/lattice-lottery/guide/" class="home__go" data-v-6e8e7eca>快速了解</a></div> <hr> <h3 id="简单开始"><a href="#简单开始" class="header-anchor">#</a> 简单开始</h3> <div class="language-sh extra-class"><pre class="language-sh"><code>
+<span class="token comment"># vue2</span>
+<span class="token comment"># 安装 sh</span>
+<span class="token function">npm</span> <span class="token function">install</span> lattice-lottery --save
+
+<span class="token comment"># 注册 </span>
+<span class="token function">import</span> Vue from <span class="token string">'vue'</span>
+<span class="token function">import</span> LatticeLottery from <span class="token string">'lattice-lottery'</span>
+<span class="token function">import</span> <span class="token string">'lattice-lottery/lib/lattice-lottery.css'</span>
+
+Vue.use<span class="token punctuation">(</span>LatticeLottery<span class="token punctuation">)</span>
+
+
+<span class="token comment"># vue3</span>
+<span class="token comment"># 安装 sh</span>
+<span class="token function">npm</span> <span class="token function">install</span> lattice-lottery-plus --save
+
+<span class="token comment"># 注册 </span>
+<span class="token function">import</span> <span class="token punctuation">{</span> createApp <span class="token punctuation">}</span> from <span class="token string">'vue'</span>
+<span class="token function">import</span> App from <span class="token string">'./App.vue'</span>
+
+<span class="token function">import</span> LatticeLottery from <span class="token string">'lattice-lottery-plus'</span>
+<span class="token function">import</span> <span class="token string">'lattice-lottery-plus/lib/lattice-lottery.css'</span>
+
+const app <span class="token operator">=</span> createApp<span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app.use<span class="token punctuation">(</span>LatticeLottery<span class="token punctuation">)</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/lattice-lottery/assets/js/app.d91f411f.js" defer></script><script src="/lattice-lottery/assets/js/2.c2cd35c6.js" defer></script><script src="/lattice-lottery/assets/js/14.f3347319.js" defer></script><script src="/lattice-lottery/assets/js/4.a74a2175.js" defer></script>
+  </body>
+</html>

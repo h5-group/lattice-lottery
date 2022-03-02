@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>配置参数 | lattice-lottery</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?d98e51720ec70609a3d5998161b75bab";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+      </script>
+    <meta name="description" content="基于Vue的九宫格抽奖组件">
+    
+    <link rel="preload" href="/lattice-lottery/assets/css/0.styles.2515485b.css" as="style"><link rel="preload" href="/lattice-lottery/assets/js/app.d91f411f.js" as="script"><link rel="preload" href="/lattice-lottery/assets/js/2.c2cd35c6.js" as="script"><link rel="preload" href="/lattice-lottery/assets/js/17.ba8d3256.js" as="script"><link rel="preload" href="/lattice-lottery/assets/js/5.c0c0d164.js" as="script"><link rel="prefetch" href="/lattice-lottery/assets/js/10.7a77350e.js"><link rel="prefetch" href="/lattice-lottery/assets/js/11.f76804f9.js"><link rel="prefetch" href="/lattice-lottery/assets/js/12.9db28b23.js"><link rel="prefetch" href="/lattice-lottery/assets/js/13.73d715c7.js"><link rel="prefetch" href="/lattice-lottery/assets/js/14.f3347319.js"><link rel="prefetch" href="/lattice-lottery/assets/js/15.099e43f4.js"><link rel="prefetch" href="/lattice-lottery/assets/js/16.5161aa4d.js"><link rel="prefetch" href="/lattice-lottery/assets/js/3.6e184758.js"><link rel="prefetch" href="/lattice-lottery/assets/js/4.a74a2175.js"><link rel="prefetch" href="/lattice-lottery/assets/js/6.b32f68cf.js"><link rel="prefetch" href="/lattice-lottery/assets/js/7.cb8dcf94.js"><link rel="prefetch" href="/lattice-lottery/assets/js/8.2ddb3402.js"><link rel="prefetch" href="/lattice-lottery/assets/js/9.d3d7c21a.js">
+    <link rel="stylesheet" href="/lattice-lottery/assets/css/0.styles.2515485b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/lattice-lottery/" class="home-link router-link-active"><!----> <span class="site-name">lattice-lottery</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/lattice-lottery/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/lattice-lottery/demo/" class="nav-link">
+  Demo
+</a></div><div class="nav-item"><a href="https://github.com/h5-group/lattice-lottery" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/lattice-lottery/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/lattice-lottery/demo/" class="nav-link">
+  Demo
+</a></div><div class="nav-item"><a href="https://github.com/h5-group/lattice-lottery" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/lattice-lottery/guide/" aria-current="page" class="sidebar-link">指南</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/#介绍" class="sidebar-link">介绍</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/#移动端自适应页面怎么办" class="sidebar-link">移动端自适应页面怎么办？</a></li></ul></li><li><a href="/lattice-lottery/guide/start.html" class="sidebar-link">快速开始</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/start.html#安装" class="sidebar-link">安装</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/start.html#注册" class="sidebar-link">注册</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/start.html#使用" class="sidebar-link">使用</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/start.html#效果图" class="sidebar-link">效果图</a></li></ul></li><li><a href="/lattice-lottery/guide/introduce.html" class="sidebar-link">钩子</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/introduce.html#确定抽奖-onsubmit" class="sidebar-link">确定抽奖（onsubmit）</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/introduce.html#开始-go" class="sidebar-link">开始 （go）</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/introduce.html#动画开始-onstart" class="sidebar-link">动画开始（onstart）</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/introduce.html#错误-onerror" class="sidebar-link">错误（onerror）</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/introduce.html#动画结束-onend" class="sidebar-link">动画结束（onend）</a></li></ul></li><li><a href="/lattice-lottery/guide/option.html" aria-current="page" class="active sidebar-link">配置参数</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/option.html#attributes" class="sidebar-link">Attributes</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/option.html#list-options" class="sidebar-link">list options</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/option.html#样式配置" class="sidebar-link">样式配置</a></li></ul></li><li><a href="/lattice-lottery/guide/contact.html" class="sidebar-link">联系和反馈</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="配置参数"><a href="#配置参数" class="header-anchor">#</a> 配置参数</h1> <div class="language-html extra-class"><pre class="language-html"><code>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>lottery-grid</span> <span class="token attr-name">:list</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>list<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:circleTimes</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>3<span class="token punctuation">&quot;</span></span> <span class="token attr-name">velocity</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>speed<span class="token punctuation">&quot;</span></span> <span class="token attr-name">btnText</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>lottery-grid</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre></div><h2 id="attributes"><a href="#attributes" class="header-anchor">#</a> Attributes</h2> <br> <div class="e-table" data-v-61f084fc><div class="e-tr head" data-v-61f084fc><div class="e-td" data-v-61f084fc>参数</div> <div class="e-td" data-v-61f084fc>说明</div> <div class="e-td" data-v-61f084fc>类型</div> <div class="e-td" data-v-61f084fc>可选值</div> <div class="e-td" data-v-61f084fc>默认值</div></div> <div class="e-tr" data-v-61f084fc><div class="e-td" data-v-61f084fc>list</div> <div class="e-td" data-v-61f084fc>奖品列表数据</div> <div class="e-td" data-v-61f084fc>array</div> <div class="e-td" data-v-61f084fc>必填</div> <div class="e-td" data-v-61f084fc></div></div><div class="e-tr" data-v-61f084fc><div class="e-td" data-v-61f084fc>circleTimes</div> <div class="e-td" data-v-61f084fc>动画圈数</div> <div class="e-td" data-v-61f084fc>string, number</div> <div class="e-td" data-v-61f084fc>-</div> <div class="e-td" data-v-61f084fc>3</div></div><div class="e-tr" data-v-61f084fc><div class="e-td" data-v-61f084fc>velocity</div> <div class="e-td" data-v-61f084fc>动画效果</div> <div class="e-td" data-v-61f084fc>string</div> <div class="e-td" data-v-61f084fc>匀速：invariance；慢快慢：speed</div> <div class="e-td" data-v-61f084fc>speed</div></div><div class="e-tr" data-v-61f084fc><div class="e-td" data-v-61f084fc>btnText</div> <div class="e-td" data-v-61f084fc>抽奖按钮文案</div> <div class="e-td" data-v-61f084fc>string</div> <div class="e-td" data-v-61f084fc>-</div> <div class="e-td" data-v-61f084fc>抽奖</div></div></div> <br> <h2 id="list-options"><a href="#list-options" class="header-anchor">#</a> list options</h2> <br> <div class="e-table" data-v-61f084fc><div class="e-tr head" data-v-61f084fc><div class="e-td" data-v-61f084fc>参数</div> <div class="e-td" data-v-61f084fc>说明</div> <div class="e-td" data-v-61f084fc>类型</div> <div class="e-td" data-v-61f084fc>可选值</div> <div class="e-td" data-v-61f084fc>默认值</div></div> <div class="e-tr" data-v-61f084fc><div class="e-td" data-v-61f084fc>label</div> <div class="e-td" data-v-61f084fc>奖品名称</div> <div class="e-td" data-v-61f084fc>string</div> <div class="e-td" data-v-61f084fc>-</div> <div class="e-td" data-v-61f084fc>空</div></div><div class="e-tr" data-v-61f084fc><div class="e-td" data-v-61f084fc>image</div> <div class="e-td" data-v-61f084fc>奖品图</div> <div class="e-td" data-v-61f084fc>string</div> <div class="e-td" data-v-61f084fc>-</div> <div class="e-td" data-v-61f084fc>空</div></div></div> <br> <h2 id="样式配置"><a href="#样式配置" class="header-anchor">#</a> 样式配置</h2> <p>通常这类抽奖组件的定制化程度很高，所以决定直接重写css样式更直接方便。</p> <div class="language-html extra-class"><pre class="language-html"><code>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>lottery-grid</span> <span class="token attr-name">:list</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>list<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>lottery1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>lottery-grid</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre></div><p>如果style便签定义了 <code>scoped</code> 属性，需要再类名前加上 <code>::v-deep</code>。</p> <p>关于<code>::v-deep</code>的相关内容不详细介绍，自行查阅下相关知识点。</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 如果没有声明 scoped 属性，不需要加 ::v-deep */</span>
+&lt;style lang=<span class="token string">&quot;less&quot;</span> scoped&gt;
+  <span class="token comment">/* 为了防止样式重叠 建议给组件加上自定义的class类名 */</span>
+  <span class="token selector">.lottery1</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 奖品列表的蒙层，根据抽奖动画选中的位置被显示出来 */</span>
+    <span class="token selector">::v-deep .prize__item__mask</span> <span class="token punctuation">{</span>
+      <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 205<span class="token punctuation">,</span> 0.6<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">/* 奖品图样式 */</span>
+    <span class="token selector">::v-deep .prize__item__image</span> <span class="token punctuation">{</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">/* 九宫格组件样式 为了跟随羡慕的自适应方案 */</span>
+    <span class="token selector">::v-deep .lattice__lottery__box</span> <span class="token punctuation">{</span>
+      <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> 560px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">/* 奖品块样式 为了跟随羡慕的自适应方案 */</span>
+    <span class="token selector">::v-deep .lattice__lottery__item</span> <span class="token punctuation">{</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> 170px<span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> 170px<span class="token punctuation">;</span>
+      <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+      <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #ccc<span class="token punctuation">;</span>
+      <span class="token property">font-size</span><span class="token punctuation">:</span> 18px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">/* 抽奖按钮 */</span>
+    <span class="token selector">::v-deep .lattice__lottery__btn</span> <span class="token punctuation">{</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> 170px<span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> 170px<span class="token punctuation">;</span>
+      <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #ccc<span class="token punctuation">;</span>
+      <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+      <span class="token comment">/* lottery-list 组件的抽奖按钮 */</span>
+      <span class="token selector">&amp;.list</span> <span class="token punctuation">{</span>
+        <span class="token property">margin-top</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">/* 抽奖动画处于选中状态的奖品块样式 */</span>
+    <span class="token selector">::v-deep .lattice__lottery__actItem</span> <span class="token punctuation">{</span>
+      <span class="token property">background-color</span><span class="token punctuation">:</span> rebeccapurple<span class="token punctuation">;</span>
+      <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+&lt;/style&gt;
+</code></pre></div><p>还有疑问？那来看看demo吧~ <a href="/lattice-lottery/demo">传送门</a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/lattice-lottery/guide/introduce.html" class="prev">
+        钩子
+      </a></span> <span class="next"><a href="/lattice-lottery/guide/contact.html">
+        联系和反馈
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/lattice-lottery/assets/js/app.d91f411f.js" defer></script><script src="/lattice-lottery/assets/js/2.c2cd35c6.js" defer></script><script src="/lattice-lottery/assets/js/17.ba8d3256.js" defer></script><script src="/lattice-lottery/assets/js/5.c0c0d164.js" defer></script>
+  </body>
+</html>
