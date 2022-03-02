@@ -1,26 +1,26 @@
 <style lang="less" scoped>
 .mtLottery2 {
-  ::v-deep .prize__item__mask {
+  :deep(.prize__item__mask) {
     background-color: rgba(0, 0, 205, 0.6);
     // background-color: transparent;
   }
-  ::v-deep .prize__item__image {
+  :deep(.prize__item__image) {
     width: 100%;
     height: 100%;
   }
 
-  ::v-deep .lattice__lottery__box {
+  :deep(.lattice__lottery__box) {
     margin: 0 auto;
     width: 560px;
   }
-  ::v-deep .lattice__lottery__item {
+  :deep(.lattice__lottery__item) {
     width: 170px;
     height: 170px;
     margin-bottom: 30px;
     border: 1px solid #ccc;
     font-size: 18px;
   }
-  ::v-deep .lattice__lottery__btn {
+  :deep(.lattice__lottery__btn) {
     width: 170px;
     height: 170px;
     border: 1px solid #ccc;
@@ -29,7 +29,7 @@
       margin-top: 30px;
     }
   }
-  // ::v-deep .lattice__lottery__actItem {
+  // :deep(.lattice__lottery__actItem) {
   //   background-color: rebeccapurple;
   //   color: white;
   // }

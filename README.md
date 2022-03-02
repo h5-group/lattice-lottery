@@ -1,18 +1,44 @@
 # lattice-lottery
 
-基于Vue的九宫格抽奖组件。
+lattice-lottery是一个基于Vue的九宫格抽奖组件。
 
-```sh
+``` sh
 
-# 安装 sh
-npm install lattice-lottery --save-dev
+# vue2
+npm install lattice-lottery --save
 
-# 注册 vue
+# vue3
+npm install lattice-lottery-plus --save
+
+```
+
+- vue2项目
+
+``` javascript
+
+// vue2 main.js
 import Vue from 'vue'
 import LatticeLottery from 'lattice-lottery'
 import 'lattice-lottery/lib/lattice-lottery.css'
 
 Vue.use(LatticeLottery)
+
+```
+
+- vue3项目
+
+``` javascript
+
+// vue3 main.js
+import { createApp } from 'vue'
+import App from './App.vue'
+
+import LatticeLottery from 'lattice-lottery-plus'
+import 'lattice-lottery-plus/lib/lattice-lottery.css'
+
+const app = createApp(App);
+
+app.use(LatticeLottery)
 
 ```
 
