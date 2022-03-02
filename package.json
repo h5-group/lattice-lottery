@@ -14,7 +14,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lib": "vue-cli-service build --target lib --name lattice-lottery --dest lib packages/index.js",
+    "lib": "vue-cli-service build --target lib --filename lattice-lottery --name LatticeLottery --dest lib packages/index.js",
     "docs:dev": "vuepress dev docs --temp .temp",
     "docs:build": "vuepress build docs"
   },
