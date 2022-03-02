@@ -1,7 +1,9 @@
 .DS_Store
 node_modules
-/dist
-/lib
+vue2/dist
+vue2/lib
+vue3/dist
+vue3/lib
 .temp
 /docs/.vuepress/dist
 
