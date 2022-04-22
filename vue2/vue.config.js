@@ -1,4 +1,6 @@
-module.exports = {
+const buildConfig = require('./build/config.build');
+// console.log('aaa:', process.env.npm_lifecycle_event)
+const defaultConfig = {
   lintOnSave: false,
   productionSourceMap: false,
   crossorigin: 'anonymous',
@@ -23,4 +25,8 @@ module.exports = {
       .use('babel')
       .loader('babel-loader')
   }
-}
+};
+module.exports = process.env.npm_lifecycle_event === 'lib' ? {
+  ...defaultConfig,
+  ...buildConfig,
+} : defaultConfig
