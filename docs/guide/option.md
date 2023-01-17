@@ -1,12 +1,14 @@
 # 配置参数
 
+## 九宫格抽奖
+
 ```html
 
 <lottery-grid :list="list" :circleTimes="3" velocity="speed" btnText=""></lottery-grid>
 
 ```
 
-## Attributes
+### Attributes
 
 <br />
 
@@ -67,7 +69,7 @@ export default {
 
 <br />
 
-## list options
+### list options
 
 <br />
 
@@ -77,7 +79,7 @@ export default {
 
 <br />
 
-## 样式配置
+### 样式配置
 
 通常这类抽奖组件的定制化程度很高，所以决定直接重写css样式更直接方便。
 
@@ -139,3 +141,115 @@ export default {
 ```
 
 还有疑问？那来看看demo吧~ [传送门](/lattice-lottery/demo)
+
+<br />
+
+<br />
+
+<br />
+
+## 老虎机
+
+```html
+
+  <slot-machine
+    class="myMachine"
+    :colCount="4"
+    :moveTime="6"
+    :list="list"
+    @onend="onMachineEnd"
+    @onerror="onMachineError"
+    ref="machine"
+  />
+
+```
+
+### Attributes
+
+<br />
+
+<script>
+export default {
+  data() {
+    return {
+      attributes: [
+        {
+          label: 'list',
+          desc: '奖品列表数据',
+          type: 'array',
+          values: '必填',
+          default: ''
+        }, {
+          label: 'colCount',
+          desc: '老虎机列数',
+          type: 'string, number',
+          values: '-',
+          default: '3'
+        }, {
+          label: 'moveTime',
+          desc: '转动次数',
+          type: 'string, number',
+          values: '-',
+          default: '4'
+        }, {
+          label: 'btnText',
+          desc: '抽奖按钮文案',
+          type: 'string',
+          values: '-',
+          default: '抽奖'
+        },
+      ],
+      listOptions: [
+        {
+          label: 'label',
+          desc: '奖品名称',
+          type: 'string',
+          values: '-',
+          default: '空'
+        }, {
+          label: 'image',
+          desc: '奖品图',
+          type: 'string',
+          values: '-',
+          default: '空'
+        },
+      ],
+      event: [
+        {
+          label: 'onend',
+          desc: '动画结束',
+          type: 'function',
+          values: '动画结束，回调中奖结果',
+          default: ''
+        }, {
+          label: 'onerror',
+          desc: '错误事件',
+          type: 'function',
+          values: '传参异常判断，重复动画判断',
+          default: ''
+        }
+      ],
+    }
+  }
+}
+</script>
+
+<template>
+  <option-table :list="attributes" />
+</template>
+
+### list options
+
+<br />
+
+<template>
+  <option-table :list="listOptions" />
+</template>
+
+### event options
+
+<br />
+
+<template>
+  <option-table :list="event" />
+</template>

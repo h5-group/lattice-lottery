@@ -39,7 +39,7 @@ module.exports = {
       }
     ],
     sidebar: {
-      '/demo/': ['', 'lottery-list', 'example'],
+      '/demo/': ['', 'lottery-list', 'slot-machine', 'example'],
       '/guide/': ['', 'start', 'introduce', 'option', 'contact'],
       '/': false,
     }
