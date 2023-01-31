@@ -59,3 +59,7 @@ lottery-grid
 lottery-list
 
 <img src="../.vuepress/public/images/lottery_list.png" style="width: 330px; height=460px" />
+
+slot-machine
+
+<img src="../.vuepress/public/images/slot_machine.png" style="width: 520px; height=550px" />
