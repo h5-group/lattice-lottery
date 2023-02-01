@@ -62,6 +62,42 @@
 <template>
   <div class="page">
     <!-- 默认 -->
+    <h1>默认</h1>
+    <lottery-grid
+      ref="mtLottery1"
+      @onend="onend"
+      :list="list"
+      @onsubmit="request('mtLottery1')"
+    ></lottery-grid>
+
+    <!-- 配置 -->
+    <h1>配置</h1>
+    <lottery-grid
+      ref="mtLottery2"
+      @onend="onend"
+      v-bind="lotteryOption"
+      :list="list"
+      @onsubmit="request('mtLottery2')"
+    ></lottery-grid>
+
+    <!-- 自定义样式 -->
+    <h1>自定义样式</h1>
+    <lottery-grid
+      ref="mtLottery3"
+      @onend="onend"
+      :list="list"
+      @onsubmit="request('mtLottery3')"
+      class="mtLottery2"
+    ></lottery-grid>
+
+    <!-- 按钮在外 -->
+    <h1>按钮在外</h1>
+    <lottery-list
+      ref="mtLottery4"
+      @onend="onend"
+      :list="list"
+      @onsubmit="request('mtLottery4')"
+    ></lottery-list>
 
     <!-- 老虎机 -->
     <h1>老虎机</h1>
