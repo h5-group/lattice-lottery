@@ -2,7 +2,7 @@
   <div class="home">
     <div class="home__logo"></div>
     <div class="home__name">lattice-lottery</div>
-    <div class="home__desc">基于Vue的九宫格抽奖组件</div>
+    <div class="home__desc">基于Vue的活动抽奖组件</div>
     <a href="/lattice-lottery/guide/" class="home__go">快速了解</a>
   </div>
 </template>

@@ -1406,12 +1406,12 @@ var srcvue_type_template_id_0720cca5_staticRenderFns = []
 
 // CONCATENATED MODULE: ../packages/SlotMachine/src/index.vue?vue&type=template&id=0720cca5&
 
-// CONCATENATED MODULE: ./node_modules/_cache-loader@4.1.0@cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"415e06cc-vue-loader-template"}!./node_modules/_vue-loader@15.9.8@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_cache-loader@4.1.0@cache-loader/dist/cjs.js??ref--1-0!./node_modules/_vue-loader@15.9.8@vue-loader/lib??vue-loader-options!../packages/SlotMachine/src/col.vue?vue&type=template&id=47c9a9fe&
-var colvue_type_template_id_47c9a9fe_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"slotMachine__col"},[_c('div',{ref:"slotMachine__ul"},_vm._l((_vm.cList),function(item,index){return _c('div',{key:index,staticClass:"slotMachine__li"},[(item.image)?_c('img',{staticClass:"slotMachine__image",attrs:{"src":item.image,"alt":""}}):_vm._e(),(item.label)?_c('span',{staticClass:"slotMachine__label"},[_vm._v(_vm._s(item.label))]):_vm._e()])}),0),_c('div',{ref:"slotMachine__li",staticClass:"slotMachine__li hide"})])}
-var colvue_type_template_id_47c9a9fe_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/_cache-loader@4.1.0@cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"415e06cc-vue-loader-template"}!./node_modules/_vue-loader@15.9.8@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_cache-loader@4.1.0@cache-loader/dist/cjs.js??ref--1-0!./node_modules/_vue-loader@15.9.8@vue-loader/lib??vue-loader-options!../packages/SlotMachine/src/col.vue?vue&type=template&id=46e97782&
+var colvue_type_template_id_46e97782_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"slotMachine__col"},[_c('div',{ref:"slotMachine__ul",staticClass:"slotMachine__ul"},_vm._l((_vm.cList),function(item,index){return _c('div',{key:index,staticClass:"slotMachine__li"},[(item.image)?_c('img',{staticClass:"slotMachine__image",attrs:{"src":item.image,"alt":""}}):_vm._e(),(item.label)?_c('span',{staticClass:"slotMachine__label"},[_vm._v(_vm._s(item.label))]):_vm._e()])}),0),_c('div',{ref:"slotMachine__li",staticClass:"slotMachine__li hide"})])}
+var colvue_type_template_id_46e97782_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ../packages/SlotMachine/src/col.vue?vue&type=template&id=47c9a9fe&
+// CONCATENATED MODULE: ../packages/SlotMachine/src/col.vue?vue&type=template&id=46e97782&
 
 // CONCATENATED MODULE: ./node_modules/_cache-loader@4.1.0@cache-loader/dist/cjs.js??ref--1-0!./node_modules/_vue-loader@15.9.8@vue-loader/lib??vue-loader-options!../packages/SlotMachine/src/col.vue?vue&type=script&lang=js&
 //
@@ -1514,8 +1514,8 @@ var colvue_type_style_index_0_lang_less_ = __webpack_require__("c0f7");
 
 var col_component = normalizeComponent(
   src_colvue_type_script_lang_js_,
-  colvue_type_template_id_47c9a9fe_render,
-  colvue_type_template_id_47c9a9fe_staticRenderFns,
+  colvue_type_template_id_46e97782_render,
+  colvue_type_template_id_46e97782_staticRenderFns,
   false,
   null,
   null,
@@ -1658,40 +1658,40 @@ SlotMachine_src.install = function (Vue) {
 
 
 
-// // 组件列表
-// const components = [
-//   LotteryGrid,
-//   LotteryList,
-//   SlotMachine,
-// ]
+// 组件列表
+const components = [
+  lottery_grid,
+  lottery_list,
+  SlotMachine_src,
+]
 
-// // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，那么所有的组件都会被注册
-// const install = function (Vue) {
-//   // 判断是否安装
-//   if (install.installed) return
-//   // 遍历注册全局组件
-//   components.map(component => Vue.component(component.name, component))
-// }
+// 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，那么所有的组件都会被注册
+const install = function (Vue) {
+  // 判断是否安装
+  if (install.installed) return
+  // 遍历注册全局组件
+  components.map(component => Vue.component(component.name, component))
+}
 
-// // 判断是否是直接引入文件
-// if (typeof window !== 'undefined' && window.Vue) {
-//   install(window.Vue)
-// }
+// 判断是否是直接引入文件
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue)
+}
 
-// export default {
-//   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
-//   install,
-//   // 以下是具体的组件列表
-//   LotteryGrid,
-//   LotteryList,
-//   SlotMachine,
-// }
+/* harmony default export */ var packages_0 = ({
+  // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
+  install,
+  // 以下是具体的组件列表
+  LotteryGrid: lottery_grid,
+  LotteryList: lottery_list,
+  SlotMachine: SlotMachine_src,
+});
 
 
 // CONCATENATED MODULE: ./node_modules/_@vue_cli-service@4.5.17@@vue/cli-service/lib/commands/build/entry-lib.js
 
 
-/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (/* Cannot get final name for export "default" in "../packages/index.js" (known exports: , known reexports: LotteryGrid LotteryList SlotMachine) */ undefined);
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (packages_0);
 
 
 
