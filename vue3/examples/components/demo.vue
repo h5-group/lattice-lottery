@@ -44,19 +44,20 @@
 }
 
 // 老虎机
-// .myMachine {
-//   width: 600px;
-//   :deep(.slotMachine__col) {
-//     height: 88px;
-//   }
-//   :deep(.slotMachine__li) {
-//     height: 88px;
-//   }
-//   :deep(.slotMachine__image) {
-//     width: 100%;
-//     height: 100%;
-//   }
-// }
+.myMachine {
+  width: 600px;
+  :deep(.slotMachine__col) {
+    border: 1px solid blueviolet;
+    height: 88px;
+  }
+  :deep(.slotMachine__li) {
+    height: 88px;
+  }
+  :deep(.slotMachine__image) {
+    width: 100%;
+    height: 100%;
+  }
+}
 </style>
 
 <template>
@@ -150,7 +151,8 @@ export default {
           label: "8等奖",
         },
         {
-          label: "9等奖",
+          // label: "9等奖",
+          image: logo,
         },
       ],
       lotteryOption: {

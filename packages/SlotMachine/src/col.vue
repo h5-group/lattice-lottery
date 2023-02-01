@@ -1,6 +1,6 @@
 <template>
   <div class="slotMachine__col">
-    <div ref="slotMachine__ul">
+    <div ref="slotMachine__ul" class="slotMachine__ul">
       <div v-for="(item, index) of cList" class="slotMachine__li" :key="index">
         <img class="slotMachine__image" v-if="item.image" :src="item.image" alt="">
         <span class="slotMachine__label" v-if="item.label">{{ item.label }}</span>

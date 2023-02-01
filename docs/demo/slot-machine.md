@@ -1,6 +1,6 @@
 # 老虎机
 
-## 默认配置
+## 配置样式
 
 老虎机 slot-machine 组件的奖品列表`list`没有个数要求。
 
@@ -79,6 +79,30 @@
     },
   }
 </script>
+
+<style>
+  /* 宽度大小 */
+  .myMachine {
+    width: 600px;
+  }
+  /* 老虎机格子的样式 */
+  .slotMachine__col {
+    height: 88px;
+  }
+  /* 奖品item的样式 */
+  .slotMachine__li {
+    height: 88px;
+  }
+  /* 图片样式 */
+  .slotMachine__image {
+    width: 120px;
+    height: 120px;
+  }
+  /* 文字样式 */
+  .slotMachine__label {
+    color: red;
+  }
+</style>
 
 ```
 

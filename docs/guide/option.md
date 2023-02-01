@@ -253,3 +253,36 @@ export default {
 <template>
   <option-table :list="event" />
 </template>
+
+### 样式配置
+
+如果style便签定义了 `scoped` 属性，需要再类名前加上 `::v-deep`。
+
+关于`::v-deep`的相关内容不详细介绍，自行查阅下相关知识点。
+
+```css
+/* 如果没有声明 scoped 属性，不需要加 ::v-deep */
+<style lang="less" scoped>
+  /* 宽度大小 */
+  .myMachine {
+    width: 600px;
+    /* 老虎机格子的样式 */
+    :deep(.slotMachine__col) {
+      height: 88px;
+    }
+    /* 奖品item的样式 */
+    :deep(.slotMachine__li) {
+      height: 88px;
+    }
+    /* 图片样式 */
+    :deep(.slotMachine__image) {
+      width: 100%;
+      height: 100%;
+    }
+    /* 文字样式 */
+    :deep(.slotMachine__label) {
+
+    }
+  }
+</style>
+```
