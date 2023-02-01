@@ -286,3 +286,5 @@ export default {
   }
 </style>
 ```
+
+还有疑问？那来看看demo吧~ [传送门](/demo/slot-machine.html#配置样式)
