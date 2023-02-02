@@ -39,10 +39,10 @@ module.exports = {
       }
     ],
     sidebar: {
-      '/demo/': ['', 'lottery-list', 'example'],
-      '/guide/': ['', 'start', 'introduce', 'option', 'contact'],
+      '/demo/': ['', 'lottery-list', 'slot-machine', 'example'],
+      '/guide/': ['', 'start', 'introduce', 'option', 'version', 'contact'],
       '/': false,
-    }
+    },
   },
   plugins: [
     ['demo-container',

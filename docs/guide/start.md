@@ -22,10 +22,16 @@ npm install lattice-lottery-plus --save
 
 // vue2 main.js
 import Vue from 'vue'
-import LatticeLottery from 'lattice-lottery'
+import {
+  LotteryGrid,
+  LotteryList,
+  SlotMachine
+} from 'lattice-lottery'
 import 'lattice-lottery/lib/lattice-lottery.css'
 
-Vue.use(LatticeLottery)
+Vue.use(LotteryGrid)
+Vue.use(LotteryList)
+Vue.use(SlotMachine)
 
 ```
 
@@ -37,12 +43,14 @@ Vue.use(LatticeLottery)
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import LatticeLottery from 'lattice-lottery-plus'
+import {
+  LotteryGrid,
+  LotteryList,
+  SlotMachine
+} from 'lattice-lottery-plus'
 import 'lattice-lottery-plus/lib/lattice-lottery.css'
 
-const app = createApp(App);
-
-app.use(LatticeLottery)
+createApp(App).use(LotteryGrid).use(LotteryList).use(SlotMachine).mount('#app')
 
 ```
 
@@ -59,3 +67,7 @@ lottery-grid
 lottery-list
 
 <img src="../.vuepress/public/images/lottery_list.png" style="width: 330px; height=460px" />
+
+slot-machine
+
+<img src="../.vuepress/public/images/slot_machine.png" style="width: 520px; height=550px" />

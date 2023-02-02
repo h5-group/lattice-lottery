@@ -1,7 +1,7 @@
 {
   "name": "lattice-lottery",
   "version": "1.0.0",
-  "description": "基于Vue的九宫格抽奖组件。",
+  "description": "基于Vue的抽奖组件。",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -28,6 +28,8 @@
   },
   "homepage": "https://github.com/h5-group/lattice-lottery#readme",
   "devDependencies": {
+    "browserslist": "^4.21.5",
+    "caniuse-lite": "^1.0.30001450",
     "less-loader": "^6.0.0",
     "vuepress": "^1.9.7",
     "vuepress-plugin-demo-container": "^0.2.0"

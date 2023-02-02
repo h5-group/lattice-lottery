@@ -112,6 +112,20 @@ module.exports =
 
 /***/ }),
 
+/***/ "395b":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "4296":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "79e4":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -270,12 +284,28 @@ exports.default = (sfc, props) => {
 
 /***/ }),
 
+/***/ "f07b":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _vue3_node_modules_mini_css_extract_plugin_0_9_0_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_vue3_node_modules_css_loader_3_6_0_css_loader_dist_cjs_js_ref_11_oneOf_1_1_vue3_node_modules_vue_loader_16_8_3_vue_loader_dist_stylePostLoader_js_vue3_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_11_oneOf_1_2_vue3_node_modules_less_loader_6_2_0_less_loader_dist_cjs_js_ref_11_oneOf_1_3_vue3_node_modules_cache_loader_4_1_0_cache_loader_dist_cjs_js_ref_1_0_vue3_node_modules_vue_loader_16_8_3_vue_loader_dist_index_js_ref_1_1_col_vue_vue_type_style_index_0_id_46e97782_lang_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("395b");
+/* harmony import */ var _vue3_node_modules_mini_css_extract_plugin_0_9_0_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_vue3_node_modules_css_loader_3_6_0_css_loader_dist_cjs_js_ref_11_oneOf_1_1_vue3_node_modules_vue_loader_16_8_3_vue_loader_dist_stylePostLoader_js_vue3_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_11_oneOf_1_2_vue3_node_modules_less_loader_6_2_0_less_loader_dist_cjs_js_ref_11_oneOf_1_3_vue3_node_modules_cache_loader_4_1_0_cache_loader_dist_cjs_js_ref_1_0_vue3_node_modules_vue_loader_16_8_3_vue_loader_dist_index_js_ref_1_1_col_vue_vue_type_style_index_0_id_46e97782_lang_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vue3_node_modules_mini_css_extract_plugin_0_9_0_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_vue3_node_modules_css_loader_3_6_0_css_loader_dist_cjs_js_ref_11_oneOf_1_1_vue3_node_modules_vue_loader_16_8_3_vue_loader_dist_stylePostLoader_js_vue3_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_11_oneOf_1_2_vue3_node_modules_less_loader_6_2_0_less_loader_dist_cjs_js_ref_11_oneOf_1_3_vue3_node_modules_cache_loader_4_1_0_cache_loader_dist_cjs_js_ref_1_0_vue3_node_modules_vue_loader_16_8_3_vue_loader_dist_index_js_ref_1_1_col_vue_vue_type_style_index_0_id_46e97782_lang_less__WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+
+
+/***/ }),
+
 /***/ "f2a0":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "LotteryGrid", function() { return /* reexport */ lottery_grid; });
+__webpack_require__.d(__webpack_exports__, "LotteryList", function() { return /* reexport */ lottery_list; });
+__webpack_require__.d(__webpack_exports__, "SlotMachine", function() { return /* reexport */ SlotMachine_src; });
 
 // CONCATENATED MODULE: ./node_modules/_@vue_cli-service@4.5.15@@vue/cli-service/lib/commands/build/setPublicPath.js
 // This file is imported into lib/wc client bundles.
@@ -769,13 +799,293 @@ lottery_list.install = function (Vue) {
 });
 
 
+// CONCATENATED MODULE: ./node_modules/_vue-loader@16.8.3@vue-loader/dist/templateLoader.js??ref--5!./node_modules/_cache-loader@4.1.0@cache-loader/dist/cjs.js??ref--1-0!./node_modules/_vue-loader@16.8.3@vue-loader/dist??ref--1-1!../packages/SlotMachine/src/index.vue?vue&type=template&id=0720cca5
+
+
+const srcvue_type_template_id_0720cca5_hoisted_1 = {
+  key: 0,
+  class: "slotMachine"
+}
+
+function srcvue_type_template_id_0720cca5_render(_ctx, _cache, $props, $setup, $data, $options) {
+  const _component_col_ele = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveComponent"])("col-ele")
+
+  return ($props.list && $props.list.length > 0)
+    ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("div", srcvue_type_template_id_0720cca5_hoisted_1, [
+        (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(true), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])(external_commonjs_vue_commonjs2_vue_root_Vue_["Fragment"], null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderList"])($props.colCount, (i) => {
+          return (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])(_component_col_ele, {
+            moveTime: $props.moveTime,
+            list: $props.list,
+            concatCount: $props.concatCount,
+            key: i,
+            ref_for: true,
+            ref: "col"
+          }, null, 8, ["moveTime", "list", "concatCount"]))
+        }), 128))
+      ]))
+    : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true)
+}
+// CONCATENATED MODULE: ../packages/SlotMachine/src/index.vue?vue&type=template&id=0720cca5
+
+// CONCATENATED MODULE: ./node_modules/_vue-loader@16.8.3@vue-loader/dist/templateLoader.js??ref--5!./node_modules/_cache-loader@4.1.0@cache-loader/dist/cjs.js??ref--1-0!./node_modules/_vue-loader@16.8.3@vue-loader/dist??ref--1-1!../packages/SlotMachine/src/col.vue?vue&type=template&id=46e97782
+
+
+const colvue_type_template_id_46e97782_hoisted_1 = { class: "slotMachine__col" }
+const colvue_type_template_id_46e97782_hoisted_2 = {
+  ref: "slotMachine__ul",
+  class: "slotMachine__ul"
+}
+const colvue_type_template_id_46e97782_hoisted_3 = ["src"]
+const colvue_type_template_id_46e97782_hoisted_4 = {
+  key: 1,
+  class: "slotMachine__label"
+}
+const colvue_type_template_id_46e97782_hoisted_5 = {
+  ref: "slotMachine__li",
+  class: "slotMachine__li hide"
+}
+
+function colvue_type_template_id_46e97782_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("div", colvue_type_template_id_46e97782_hoisted_1, [
+    Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("div", colvue_type_template_id_46e97782_hoisted_2, [
+      (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(true), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])(external_commonjs_vue_commonjs2_vue_root_Vue_["Fragment"], null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderList"])($options.cList, (item, index) => {
+        return (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("div", {
+          class: "slotMachine__li",
+          key: index
+        }, [
+          (item.image)
+            ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("img", {
+                key: 0,
+                class: "slotMachine__image",
+                src: item.image,
+                alt: ""
+              }, null, 8, colvue_type_template_id_46e97782_hoisted_3))
+            : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true),
+          (item.label)
+            ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("span", colvue_type_template_id_46e97782_hoisted_4, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(item.label), 1))
+            : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true)
+        ]))
+      }), 128))
+    ], 512),
+    Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("div", colvue_type_template_id_46e97782_hoisted_5, null, 512)
+  ]))
+}
+// CONCATENATED MODULE: ../packages/SlotMachine/src/col.vue?vue&type=template&id=46e97782
+
+// CONCATENATED MODULE: ./node_modules/_cache-loader@4.1.0@cache-loader/dist/cjs.js??ref--1-0!./node_modules/_vue-loader@16.8.3@vue-loader/dist??ref--1-1!../packages/SlotMachine/src/col.vue?vue&type=script&lang=js
+
+/* harmony default export */ var colvue_type_script_lang_js = ({
+  name: 'SlotMachineCol',
+  props: {
+    list: {
+      type: Array,
+      default() {
+        return []
+      },
+    },
+    // 定义奖品列表concat几次
+    concatCount: {
+      type: [String, Number],
+      default: 3
+    },
+    moveTime: {
+      type: [String, Number],
+      default: 4,
+    }
+  },
+  data() {
+    return {
+      isMoving: false,
+      translateY: 0,
+    }
+  },
+  computed: {
+    cList() {
+      const _list = this.list || [];
+      let res = [];
+      if (_list && _list.length > 0) {
+        for (let i = 0; i < this.concatCount; i++) {
+          res = res.concat(_list)
+        }
+      }
+      return res;
+    },
+  },
+  mounted() {
+    const ulHeight = this.$refs.slotMachine__ul.clientHeight; // 总高度
+    const liHeight = this.$refs.slotMachine__li.clientHeight; // 列表子模块高度
+    this.$refs.slotMachine__ul.style = `transform: translateY(${-ulHeight + liHeight}px);`;
+  },
+  methods: {
+    go(index) {
+
+      if (this.isMoving) return;
+      this.isMoving = true;
+
+      const ulHeight = this.$refs.slotMachine__ul.clientHeight; // 总高度
+      const liHeight = this.$refs.slotMachine__li.clientHeight; // 列表子模块高度
+      const oneCaseHeight = ulHeight / this.concatCount; // 每一份列表的高度
+
+      const translateY = -oneCaseHeight + ((this.list.length - index) * liHeight); // top 定位到 顶部到 index索引的高度
+
+      const ulMoveStyle = [
+        'transition-property: transform',
+        `transition-duration: ${this.moveTime}s`,
+        'transition-timing-function: ease-in-out',
+        `transform: translateY(${translateY}px)`
+      ]
+
+      this.$refs.slotMachine__ul.style = ulMoveStyle.join(';');
+
+      setTimeout(() => {
+        this.isMoving = false;
+        const translateY = -ulHeight + ((this.list.length - index) * liHeight); // top 定位到 底部到 index索引的高度
+        this.$refs.slotMachine__ul.style = `transform: translateY(${translateY}px);`;
+      }, this.moveTime * 1000)
+    },
+  }
+});
+
+// CONCATENATED MODULE: ../packages/SlotMachine/src/col.vue?vue&type=script&lang=js
+ 
+// EXTERNAL MODULE: ../packages/SlotMachine/src/col.vue?vue&type=style&index=0&id=46e97782&lang=less
+var colvue_type_style_index_0_id_46e97782_lang_less = __webpack_require__("f07b");
+
+// CONCATENATED MODULE: ../packages/SlotMachine/src/col.vue
+
+
+
+
+
+
+
+const col_exports_ = /*#__PURE__*/exportHelper_default()(colvue_type_script_lang_js, [['render',colvue_type_template_id_46e97782_render]])
+
+/* harmony default export */ var col = (col_exports_);
+// CONCATENATED MODULE: ./node_modules/_cache-loader@4.1.0@cache-loader/dist/cjs.js??ref--1-0!./node_modules/_vue-loader@16.8.3@vue-loader/dist??ref--1-1!../packages/SlotMachine/src/index.vue?vue&type=script&lang=js
+
+
+class errorData {
+  constructor({code, data = null, msg}) {
+    console.error(msg);
+    this.code = code;
+    this.data = data;
+    this.msg = msg;
+  }
+}
+/* harmony default export */ var srcvue_type_script_lang_js = ({
+  name: 'SlotMachine',
+  components: {
+    ColEle: col
+  },
+  props: {
+    list: {
+      type: Array,
+      default() {
+        return []
+      }
+    },
+    // 动画时间 单位秒
+    moveTime: {
+      type: [String, Number],
+      default: 4,
+    },
+    // 奖品列表复制次数
+    concatCount: {
+      type: [String, Number],
+      default: 3,
+    },
+    // 滚筒列数
+    colCount: {
+      type: [String, Number],
+      default: 3,
+    }
+  },
+  data() {
+    return {
+      isMoving: false,
+    }
+  },
+  methods: {
+    go(val) {
+      if (Object.prototype.toString.call(val) !== '[object Array]') {
+        this.$emit('onerror', new errorData({
+          code: 1000,
+          msg: 'go函数的传参类型应为 Array',
+        }));
+        return;
+      }
+      if (val.length !== this.colCount) {
+        this.$emit('onerror', new errorData({
+          code: 1001,
+          data: val,
+          msg: `go函数的传参值长度（length：${val.length}） 不等于colCount值（colCount：${this.colCount}）`,
+        }));
+        return;
+      }
+      if (this.isMoving) {
+        this.$emit('onerror', new errorData({
+          code: 1002,
+          msg: '重复调用go函数',
+        }));
+        return;
+      };
+      this.isMoving = true; 
+      const cols = this.$refs.col;
+      for (let i = 0; i < cols.length; i++) {
+        setTimeout(() => {
+          cols[i].go(val[i]);
+          if (i === cols.length - 1) {
+            setTimeout(() => {
+              this.isMoving = false;
+              this.$emit('onend', val);
+            }, this.moveTime * 1000)
+          }
+        }, i * 500);
+      }
+    },
+  }
+});
+
+// CONCATENATED MODULE: ../packages/SlotMachine/src/index.vue?vue&type=script&lang=js
+ 
+// EXTERNAL MODULE: ../packages/SlotMachine/src/index.vue?vue&type=style&index=0&id=0720cca5&lang=less
+var srcvue_type_style_index_0_id_0720cca5_lang_less = __webpack_require__("f424");
+
+// CONCATENATED MODULE: ../packages/SlotMachine/src/index.vue
+
+
+
+
+
+
+
+const src_exports_ = /*#__PURE__*/exportHelper_default()(srcvue_type_script_lang_js, [['render',srcvue_type_template_id_0720cca5_render]])
+
+/* harmony default export */ var SlotMachine_src = (src_exports_);
+// CONCATENATED MODULE: ../packages/SlotMachine/index.js
+
+
+// 为组件提供 install 安装方法，供按需引入
+SlotMachine_src.install = function (Vue) {
+  Vue.component(SlotMachine_src.name, SlotMachine_src)
+}
+
+/* harmony default export */ var SlotMachine = ({
+  SlotMachine: SlotMachine_src,
+});
+
+
 // CONCATENATED MODULE: ../packages/index.js
+
+
 
 
 // 组件列表
 const components = [
   lottery_grid,
   lottery_list,
+  SlotMachine_src,
 ]
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，那么所有的组件都会被注册
@@ -791,18 +1101,32 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
+
+
 /* harmony default export */ var packages_0 = ({
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
   install,
   // 以下是具体的组件列表
   LotteryGrid: lottery_grid,
   LotteryList: lottery_list,
+  SlotMachine: SlotMachine_src,
 });
 // CONCATENATED MODULE: ./node_modules/_@vue_cli-service@4.5.15@@vue/cli-service/lib/commands/build/entry-lib.js
 
 
 /* harmony default export */ var entry_lib = __webpack_exports__["default"] = (packages_0);
 
+
+
+/***/ }),
+
+/***/ "f424":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _vue3_node_modules_mini_css_extract_plugin_0_9_0_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_vue3_node_modules_css_loader_3_6_0_css_loader_dist_cjs_js_ref_11_oneOf_1_1_vue3_node_modules_vue_loader_16_8_3_vue_loader_dist_stylePostLoader_js_vue3_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_11_oneOf_1_2_vue3_node_modules_less_loader_6_2_0_less_loader_dist_cjs_js_ref_11_oneOf_1_3_vue3_node_modules_cache_loader_4_1_0_cache_loader_dist_cjs_js_ref_1_0_vue3_node_modules_vue_loader_16_8_3_vue_loader_dist_index_js_ref_1_1_index_vue_vue_type_style_index_0_id_0720cca5_lang_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("4296");
+/* harmony import */ var _vue3_node_modules_mini_css_extract_plugin_0_9_0_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_vue3_node_modules_css_loader_3_6_0_css_loader_dist_cjs_js_ref_11_oneOf_1_1_vue3_node_modules_vue_loader_16_8_3_vue_loader_dist_stylePostLoader_js_vue3_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_11_oneOf_1_2_vue3_node_modules_less_loader_6_2_0_less_loader_dist_cjs_js_ref_11_oneOf_1_3_vue3_node_modules_cache_loader_4_1_0_cache_loader_dist_cjs_js_ref_1_0_vue3_node_modules_vue_loader_16_8_3_vue_loader_dist_index_js_ref_1_1_index_vue_vue_type_style_index_0_id_0720cca5_lang_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vue3_node_modules_mini_css_extract_plugin_0_9_0_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_vue3_node_modules_css_loader_3_6_0_css_loader_dist_cjs_js_ref_11_oneOf_1_1_vue3_node_modules_vue_loader_16_8_3_vue_loader_dist_stylePostLoader_js_vue3_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_11_oneOf_1_2_vue3_node_modules_less_loader_6_2_0_less_loader_dist_cjs_js_ref_11_oneOf_1_3_vue3_node_modules_cache_loader_4_1_0_cache_loader_dist_cjs_js_ref_1_0_vue3_node_modules_vue_loader_16_8_3_vue_loader_dist_index_js_ref_1_1_index_vue_vue_type_style_index_0_id_0720cca5_lang_less__WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
 
 
 /***/ })

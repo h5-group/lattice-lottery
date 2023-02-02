@@ -34,10 +34,34 @@
   //   color: white;
   // }
 }
+
+.page {
+  padding-bottom: 300px;
+}
+
+.box {
+  display: inline-block;
+}
+
+// 老虎机
+.myMachine {
+  width: 600px;
+  :deep(.slotMachine__col) {
+    border: 1px solid blueviolet;
+    height: 88px;
+  }
+  :deep(.slotMachine__li) {
+    height: 88px;
+  }
+  :deep(.slotMachine__image) {
+    width: 100%;
+    height: 100%;
+  }
+}
 </style>
 
 <template>
-  <div>
+  <div class="page">
     <!-- 默认 -->
     <h1>默认</h1>
     <lottery-grid
@@ -75,9 +99,26 @@
       :list="list"
       @onsubmit="request('mtLottery4')"
     ></lottery-list>
+
+    <!-- 老虎机 -->
+    <h1>老虎机</h1>
+    <div class="box">
+      <slot-machine
+        class="myMachine"
+        :colCount="4"
+        :moveTime="6"
+        :list="list"
+        @onend="onMachineEnd"
+        @onerror="onMachineError"
+        ref="machine"
+      />
+      <!-- 按钮 -->
+      <div @click="machineGo" class="btn">抽奖</div>
+    </div>
   </div>
 </template>
 <script>
+import logo from "../assets/logo.png";
 export default {
   data() {
     return {
@@ -85,14 +126,14 @@ export default {
       list: [
         {
           label: "一等奖",
-          // image: logo,
+          image: logo,
         },
         {
           label: "二等奖",
         },
         {
           label: "三等奖",
-          // image: logo,
+          image: logo,
         },
         {
           label: "四等奖",
@@ -110,7 +151,8 @@ export default {
           label: "8等奖",
         },
         {
-          label: "9等奖",
+          // label: "9等奖",
+          image: logo,
         },
       ],
       lotteryOption: {
@@ -137,6 +179,17 @@ export default {
     onend(data) {
       console.log("抽奖结果回调：", data);
       alert("恭喜您获得：" + data.label);
+    },
+    // 老虎机
+    machineGo() {
+      // go函数传入中奖列表的中奖奖品的索引值数组 如 [0,0,0]
+      this.$refs.machine.go([0, 0, 0, this.rndNum(0, this.list.length - 1)]);
+    },
+    onMachineEnd(val) {
+      alert(`中奖结果：${val.join(",")}`);
+    },
+    onMachineError(data) {
+      console.log("九宫格动画错误回调：", data);
     },
   },
 };
