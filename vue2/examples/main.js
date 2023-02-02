@@ -4,11 +4,11 @@ import App from './App.vue'
 
 // 导入组件库
 // import xui from '../../packages'
-import {
-  LotteryGrid,
-  LotteryList,
-  SlotMachine
-} from '../../packages'
+// import {
+//   LotteryGrid,
+//   LotteryList,
+//   SlotMachine
+// } from '../../packages'
 // import xui from '../lib/lattice-lottery.umd.min'
 // import '../lib/lattice-lottery.css'
 
@@ -18,11 +18,11 @@ import {
 //   SlotMachine
 // } from '../../packages'
 
-// import {
-//   LotteryGrid,
-//   LotteryList,
-//   SlotMachine
-// } from '../lib/lattice-lottery.umd.min'
+import {
+  LotteryGrid,
+  LotteryList,
+  SlotMachine
+} from '../lib/lattice-lottery.umd.min'
 
 // 注册组件库
 // Vue.use(xui)
