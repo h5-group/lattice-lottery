@@ -21,6 +21,7 @@ import {
   LotteryList,
   SlotMachine
 } from 'lattice-lottery'
+import 'lattice-lottery/lib/lattice-lottery.css'
 
 Vue.use(LotteryGrid)
 Vue.use(LotteryList)
@@ -48,6 +49,7 @@ import {
   LotteryList,
   SlotMachine
 } from 'lattice-lottery-plus'
+import 'lattice-lottery-plus/lib/lattice-lottery.css'
 
 createApp(App).use(LotteryGrid).use(LotteryList).use(SlotMachine).mount('#app')
 

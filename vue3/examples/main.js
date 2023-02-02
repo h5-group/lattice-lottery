@@ -14,5 +14,6 @@ import {
   LotteryList,
   SlotMachine
 } from '../lib/lattice-lottery.umd.min'
+import '../lib/lattice-lottery.css'
 
 createApp(App).use(LotteryGrid).use(LotteryList).use(SlotMachine).mount('#app')

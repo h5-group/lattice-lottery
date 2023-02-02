@@ -39,8 +39,8 @@ module.exports = {
       }
     ],
     sidebar: {
-      // '/demo/': ['', 'lottery-list', 'slot-machine', 'example'],
-      // '/guide/': ['', 'start', 'introduce', 'option', 'contact'],
+      '/demo/': ['', 'lottery-list', 'slot-machine', 'example'],
+      '/guide/': ['', 'start', 'introduce', 'option', 'contact'],
       '/': false,
     },
   },

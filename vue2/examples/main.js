@@ -23,6 +23,7 @@ import {
   LotteryList,
   SlotMachine
 } from '../lib/lattice-lottery.umd.min'
+import '../lib/lattice-lottery.css'
 
 // 注册组件库
 // Vue.use(xui)
