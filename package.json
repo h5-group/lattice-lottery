@@ -1,7 +1,7 @@
 {
   "name": "lattice-lottery",
   "version": "1.0.0",
-  "description": "基于Vue的九宫格抽奖组件。",
+  "description": "基于Vue的抽奖组件。",
   "main": "index.js",
   "directories": {
     "doc": "docs"

@@ -1,7 +1,7 @@
 {
   "name": "lattice-lottery-plus",
-  "version": "0.1.0",
-  "description": "基于 Vue3 的九宫格抽奖组件",
+  "version": "0.2.0-0",
+  "description": "基于 Vue3 的抽奖组件",
   "main": "./lib/lattice-lottery.umd.min.js",
   "private": false,
   "license": "MIT",
