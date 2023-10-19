@@ -15,7 +15,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  .turntable__container{
+  .turntable__container {
     position: relative;
     width: 340px;
     height: 340px;
@@ -26,8 +26,19 @@
     &.move {
       transition: transform 6s cubic-bezier(0.42, 0, 0.66, 1.09);
     }
+    &.even {
+      .turntable__blade:nth-child(1){
+        background-color: #c57519 !important;
+      }
+    }
+    .turntable__blade:nth-child(odd){
+      background-color: #f7c894;
+    }
+    .turntable__blade:nth-child(even){
+      background-color: #ffebd4;
+    }
   }
-  .turntable__content{
+  .turntable__content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -37,7 +48,6 @@
     display: flex;
     justify-content: center;
     border-radius: 50%;
-    // background: #f7c894;
     background: #fff;
     overflow: hidden;
   }
@@ -51,19 +61,6 @@
       -webkit-clip-path: -webkit-polygon(50% 100%, 0% 0%, 100% 0%);
     }
   }
-
-  .turntable__container .turntable__blade:nth-child(odd){
-    background-color: #f7c894;
-  }
-  .turntable__container .turntable__blade:nth-child(even){
-    background-color: #ffebd4;
-  }
-  .turntable__container .turntable__blade:nth-child(1){
-    background-color: #c57519;
-  }
-  // .turntable__container .turntable__blade:nth-child(5n){
-  //   background-color: #d8a366;
-  // }
 
   .turntable__lights{
     position: absolute;
@@ -88,13 +85,13 @@
     height: 12px;
     border-radius: 50%;
   }
-  .turntable__lights .turntable__light:nth-child(odd) .turntable__light__dot{
-      box-shadow: 0 0 7.5px #ff0200;
+  .turntable__light:nth-child(odd) .turntable__light__dot{
+    box-shadow: 0 0 7.5px #ff0200;
     background-color: #ff0200;
     animation: lottery_light1 0.75s ease-in-out infinite;
   }
-  .turntable__lights .turntable__light:nth-child(even) .turntable__light__dot{
-      box-shadow: 0 0 7.5px #ffffff;
+  .turntable__light:nth-child(even) .turntable__light__dot{
+    box-shadow: 0 0 7.5px #ffffff;
     background-color: #ffffff;
     animation: lottery_light2 0.75s ease-in-out infinite;
   }
@@ -157,7 +154,7 @@
   <div>
     <div class="turntable">
       <div class="turntable__btn" @click="doLottery"></div>
-      <div :class="`turntable__container${drawing ? ' move' : ''}`" :style="{ transform: `rotate(${deg}deg)`, width: `${width}px`, height: `${width}px` }">
+      <div :class="`turntable__container${drawing ? ' move' : ''}${listLength%2===1?' even':''}`" :style="{ transform: `rotate(${deg}deg)`, width: `${width}px`, height: `${width}px` }">
         <div class="turntable__content" :style="{width: `${contentWidth}px`, height: `${contentWidth}px`}">
           <div v-for="v, i in list" :key="i" :style="{transform: `rotateZ(${(i+1) * rotateDeg}deg)`, width: `${fanBladeWidth}px`}" :class="`turntable__blade${listLength > 2 ? ' gt2Length' : ''}`">
             <div class="">{{v.name}}</div>
@@ -180,7 +177,7 @@ export default {
       drawing: false,
       deg: 0,
       prizeIndex: 0,
-      isFirstClockDoturntable__btn: true,
+      isFirstMove: true,
 
       width: 640,
 
@@ -194,14 +191,6 @@ export default {
         showDesc: false,
         note: '',
         isNeedAddr: 1,
-      }, {
-        id: 1002,
-        index: 3,
-        name: '100分钟超清视频通话体验包',
-        image: '',
-        desc: '奖品将于72小时内充值到您的中奖手机，仅限当月安卓终端视频通话使用。奖品可在【我的奖品】查看详情。',
-        prizeDesc: '本奖品为虚拟物品，奖品将于72小时内充值到用户中奖手机，具体以到账短信为准。仅限当月安卓终端视频通话使用，月底自动失效。',
-        showDesc: false,
       }, {
         id: 1002,
         index: 3,
@@ -310,16 +299,13 @@ export default {
       if (this.drawing) return
       this.drawing = true
       const prizeIndex = Math.ceil(Math.random() * (this.listLength - 1))
-      console.log(prizeIndex)
-      // const prizeIndex = index
       // 上一轮转动角度 + 圈数 + (一圈 - (上一轮奖品索引值 - 本轮奖品索引值) * 奖品角度)
       this.deg =
         this.deg + 360 * 10 + (360 - (prizeIndex - this.prizeIndex) * this.rotateDeg)
-      if (this.isFirstClockDoturntable__btn) {
+      if (this.isFirstMove) {
         this.deg += Math.floor(this.rotateDeg / 2)
-        this.isFirstClockDoturntable__btn = false
+        this.isFirstMove = false
       }
-      // this.deg = this.deg + 360 * 6 + (360 - (prizeIndex - (8 - Math.floor((this.deg % 360) / 45))) * 45) - this.deg % 45;
       this.prizeIndex = prizeIndex
       setTimeout(() => {
         this.drawing = false
