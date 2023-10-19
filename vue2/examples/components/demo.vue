@@ -114,6 +114,11 @@
       <!-- 按钮 -->
       <div @click="machineGo" class="btn">抽奖</div>
     </div>
+
+    <!-- 大转盘 -->
+    <div>
+      <turntable />
+    </div>
   </div>
 </template>
 <script>
