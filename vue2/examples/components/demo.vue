@@ -57,6 +57,11 @@
 //     height: 100%;
 //   }
 // }
+
+// 大转盘
+.myTurntable {
+
+}
 </style>
 
 <template>
@@ -117,33 +122,34 @@
 
     <!-- 大转盘 -->
     <div>
-      <turntable />
+      <turntable ref="turntable" class="myTurntable" :tableBg="turntableTableBg" :skew="false" :width="640" :list="list.slice(0, 4)" @onDraw="request('turntable')" @onend="onend" />
     </div>
   </div>
 </template>
 <script>
 import logo from "../assets/logo.png";
+import turntableTableBg from "../assets/prize_table.png";
 export default {
   data() {
     return {
       //注意：list不满8个会自动补全8个，内容：谢谢参与，超过8个会截取前8个
       list: [
         {
-          label: "一等奖",
+          label: "华为Mate 60 Pro+",
           image: logo,
         },
         {
-          label: "二等奖",
+          label: "1000元现金红包",
         },
         {
           label: "三等奖",
           image: logo,
         },
         {
-          label: "四等奖",
+          label: "500元现金红包",
         },
         {
-          label: "五等奖",
+          label: "谢谢参与",
         },
         {
           label: "六等奖",
@@ -163,6 +169,7 @@ export default {
         velocity: "speed", //抽奖跳动动画：speed:慢-快-慢；invariance:匀速
         btnText: "",
       },
+      turntableTableBg,
     };
   },
   methods: {
@@ -173,7 +180,7 @@ export default {
     request(name) {
       //模拟抽奖请求
       setTimeout(() => {
-        let luckyIndex = this.rndNum(0, 7);
+        let luckyIndex = this.rndNum(0, 3);
         console.log(luckyIndex);
         this.$refs[name].go(luckyIndex);
       }, 100);

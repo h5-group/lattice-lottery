@@ -288,3 +288,124 @@ export default {
 ```
 
 还有疑问？那来看看demo吧~ [传送门](/demo/slot-machine.html#配置样式)
+
+## 大转盘
+
+```html
+
+  <turntable
+    ref="turntable"
+    class="myTurntable"
+    :list="list"
+    @onDraw="request"
+    @onend="onend" />
+
+```
+
+### Attributes
+
+<br />
+
+<script>
+export default {
+  data() {
+    return {
+      attributes: [
+        {
+          label: 'list',
+          desc: '奖品列表数据',
+          type: 'array',
+          values: '必填',
+          default: ''
+        }, {
+          label: 'width',
+          desc: '转盘大小',
+          type: 'string, number',
+          values: '-',
+          default: '340'
+        }, {
+          label: 'tableBg',
+          desc: '转盘背景图，有值则不会使用默认转盘样式',
+          type: 'image',
+          values: '-',
+          default: ''
+        }, {
+          label: 'skew',
+          desc: '是否偏移一半角度使指针指向边界',
+          type: 'boolean',
+          values: '-',
+          default: 'true'
+        },
+      ],
+      listOptions: [
+        {
+          label: 'label',
+          desc: '奖品名称',
+          type: 'string',
+          values: '-',
+          default: '空'
+        }, {
+          label: 'image',
+          desc: '奖品图',
+          type: 'string',
+          values: '-',
+          default: '空'
+        },
+      ],
+      event: [
+        {
+          label: 'onend',
+          desc: '动画结束',
+          type: 'function',
+          values: '动画结束，回调中奖结果',
+          default: ''
+        }, {
+          label: 'onDraw',
+          desc: '点击中间抽奖按钮',
+          type: 'function',
+          values: '',
+          default: ''
+        }
+      ],
+    }
+  }
+}
+</script>
+
+<template>
+  <option-table :list="attributes" />
+</template>
+
+### list options
+
+<br />
+
+<template>
+  <option-table :list="listOptions" />
+</template>
+
+### event options
+
+<br />
+
+<template>
+  <option-table :list="event" />
+</template>
+
+### 样式配置
+
+如果style便签定义了 `scoped` 属性，需要再类名前加上 `::v-deep`。
+
+关于`::v-deep`的相关内容不详细介绍，自行查阅下相关知识点。
+
+```css
+/* 如果没有声明 scoped 属性，不需要加 ::v-deep */
+<style lang="less" scoped>
+  /* 宽度大小 */
+  .myTurntable {
+
+  }
+</style>
+```
+
+还有疑问？那来看看demo吧~ [传送门](/demo/turntable.html#默认配置)

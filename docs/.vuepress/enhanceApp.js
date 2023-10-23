@@ -1,7 +1,8 @@
 import {
   LotteryGrid,
   LotteryList,
-  SlotMachine
+  SlotMachine,
+  Turntable,
 } from '../../vue2/lib/lattice-lottery.umd.min'
 import '../../vue2/lib/lattice-lottery.css'
 
@@ -13,6 +14,7 @@ export default async ({
     Vue.use(LotteryGrid)
     Vue.use(LotteryList)
     Vue.use(SlotMachine)
+    Vue.use(Turntable)
   }
   /**
    * 路由切换事件处理

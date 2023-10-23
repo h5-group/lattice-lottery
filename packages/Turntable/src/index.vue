@@ -4,6 +4,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
+  .turntable__table {
+    width: 430px;
+    height: 430px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform: rotate(0deg);
+    &.move {
+      transition: transform 6s cubic-bezier(0.42, 0, 0.66, 1.09);
+    }
+  }
   .turntable__btn {
     width: 118px;
     height: 138px;
@@ -14,6 +25,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
   }
   .turntable__container {
     position: relative;
@@ -147,23 +159,38 @@
       background-color: #ffffff;
     }
   }
+
+  .turntable__prize__name {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-size: 12px;
+    text-align: center;
+  }
+  .turntable__prize__image {
+    width: 50%;
+    max-width: 64px;
+  }
 }
 </style>
 
 <template>
   <div>
     <div class="turntable">
-      <div class="turntable__btn" @click="doLottery"></div>
-      <div :class="`turntable__container${drawing ? ' move' : ''}${listLength%2===1?' even':''}`" :style="{ transform: `rotate(${deg}deg)`, width: `${width}px`, height: `${width}px` }">
+      <div v-if="tableBg" :class="`turntable__table${drawing ? ' move' : ''}`" :style="{ transform: `rotate(${deg}deg)`, backgroundImage: `url('${tableBg}')`, width: `${width}px`, height: `${width}px` }"></div>
+      <div v-else :class="`turntable__container${drawing ? ' move' : ''}${listLength%2===1?' even':''}`" :style="{ transform: `rotate(${deg}deg)`, width: `${width}px`, height: `${width}px` }">
         <div class="turntable__content" :style="{width: `${contentWidth}px`, height: `${contentWidth}px`}">
           <div v-for="v, i in list" :key="i" :style="{transform: `rotateZ(${(i+1) * rotateDeg}deg)`, width: `${fanBladeWidth}px`}" :class="`turntable__blade${listLength > 2 ? ' gt2Length' : ''}`">
-            <div class="">{{v.name}}</div>
+            <div class="turntable__prize__name">{{v.label}}</div>
+            <img :src="v.image" class="turntable__prize__image" alt="">
           </div>
         </div>
         <div class="turntable__lights">
           <div v-for="v, i in list" :key="i" :style="{transform: `rotateZ(${(i+1) * rotateDeg}deg)`}" class="turntable__light"><div class="turntable__light__dot"></div></div>
         </div>
       </div>
+      <div class="turntable__btn" @click="onDraw"></div>
     </div>
     
   </div>
@@ -172,98 +199,58 @@
 <script>
 export default {
   name: 'Turntable',
+  props: {
+    tableBg: {
+      type: String,
+      default: '',
+    },
+    list: {
+      require: true,
+      type: Array,
+      default: function() {
+        // return [{
+        //   id: 1001,
+        //   label: '奖品1',
+        //   image: '',
+        // }, {
+        //   id: 1002,
+        //   label: '奖品2',
+        //   image: '',
+        // }, {
+        //   id: 1003,
+        //   label: '奖品3',
+        //   image: '',
+        // }, {
+        //   id: 1004,
+        //   label: '奖品4',
+        //   image: '',
+        // }, {
+        //   id: 1005,
+        //   label: '奖品5',
+        //   image: '',
+        // }, {
+        //   id: 1006,
+        //   label: '奖品6',
+        //   image: '',
+        // }]
+        return []
+      }
+    },
+    width: {
+      type: [Number, String],
+      default: 340
+    },
+    skew: {
+      type: Boolean,
+      default: true
+    }
+  },
   data() {
     return {
       drawing: false,
       deg: 0,
       prizeIndex: 0,
       isFirstMove: true,
-
-      width: 640,
-
-      list: [{
-        id: 1001,
-        index: 1,
-        name: '亚运吉祥物玩偶（单个，25cm）',
-        image: '',
-        desc: '填写邮寄地址，奖品将于次月20日前寄出。图片仅供参考，奖品以实物为准，奖品可在【我的奖品】查看详情。',
-        prizeDesc: '价值98元，本奖品为实物奖品随机发出，用户需自行在中奖后至活动结束前，完成寄送地址填写，若未在活动结束前填写收货地址，则视为主动放弃，奖品归还活动主办方。收货地址一经保存，无法修改，对您造成的不便，敬请谅解。*图片仅供参考，奖品以实物为准，奖品将于中奖次月20日之前寄出。',
-        showDesc: false,
-        note: '',
-        isNeedAddr: 1,
-      }, {
-        id: 1002,
-        index: 3,
-        name: '100分钟超清视频通话体验包',
-        image: '',
-        desc: '奖品将于72小时内充值到您的中奖手机，仅限当月安卓终端视频通话使用。奖品可在【我的奖品】查看详情。',
-        prizeDesc: '本奖品为虚拟物品，奖品将于72小时内充值到用户中奖手机，具体以到账短信为准。仅限当月安卓终端视频通话使用，月底自动失效。',
-        showDesc: false,
-      }, {
-        id: 1002,
-        index: 3,
-        name: '100分钟超清视频通话体验包',
-        image: '',
-        desc: '奖品将于72小时内充值到您的中奖手机，仅限当月安卓终端视频通话使用。奖品可在【我的奖品】查看详情。',
-        prizeDesc: '本奖品为虚拟物品，奖品将于72小时内充值到用户中奖手机，具体以到账短信为准。仅限当月安卓终端视频通话使用，月底自动失效。',
-        showDesc: false,
-      }, {
-        id: 1002,
-        index: 3,
-        name: '100分钟超清视频通话体验包',
-        image: '',
-        desc: '奖品将于72小时内充值到您的中奖手机，仅限当月安卓终端视频通话使用。奖品可在【我的奖品】查看详情。',
-        prizeDesc: '本奖品为虚拟物品，奖品将于72小时内充值到用户中奖手机，具体以到账短信为准。仅限当月安卓终端视频通话使用，月底自动失效。',
-        showDesc: false,
-      }, {
-        id: 1002,
-        index: 3,
-        name: '100分钟超清视频通话体验包',
-        image: '',
-        desc: '奖品将于72小时内充值到您的中奖手机，仅限当月安卓终端视频通话使用。奖品可在【我的奖品】查看详情。',
-        prizeDesc: '本奖品为虚拟物品，奖品将于72小时内充值到用户中奖手机，具体以到账短信为准。仅限当月安卓终端视频通话使用，月底自动失效。',
-        showDesc: false,
-      }, {
-        id: 1002,
-        index: 3,
-        name: '100分钟超清视频通话体验包',
-        image: '',
-        desc: '奖品将于72小时内充值到您的中奖手机，仅限当月安卓终端视频通话使用。奖品可在【我的奖品】查看详情。',
-        prizeDesc: '本奖品为虚拟物品，奖品将于72小时内充值到用户中奖手机，具体以到账短信为准。仅限当月安卓终端视频通话使用，月底自动失效。',
-        showDesc: false,
-      }, {
-        id: 1002,
-        index: 3,
-        name: '100分钟超清视频通话体验包',
-        image: '',
-        desc: '奖品将于72小时内充值到您的中奖手机，仅限当月安卓终端视频通话使用。奖品可在【我的奖品】查看详情。',
-        prizeDesc: '本奖品为虚拟物品，奖品将于72小时内充值到用户中奖手机，具体以到账短信为准。仅限当月安卓终端视频通话使用，月底自动失效。',
-        showDesc: false,
-      }, {
-        id: 1002,
-        index: 3,
-        name: '100分钟超清视频通话体验包',
-        image: '',
-        desc: '奖品将于72小时内充值到您的中奖手机，仅限当月安卓终端视频通话使用。奖品可在【我的奖品】查看详情。',
-        prizeDesc: '本奖品为虚拟物品，奖品将于72小时内充值到用户中奖手机，具体以到账短信为准。仅限当月安卓终端视频通话使用，月底自动失效。',
-        showDesc: false,
-      }, {
-        id: 1002,
-        index: 3,
-        name: '100分钟超清视频通话体验包',
-        image: '',
-        desc: '奖品将于72小时内充值到您的中奖手机，仅限当月安卓终端视频通话使用。奖品可在【我的奖品】查看详情。',
-        prizeDesc: '本奖品为虚拟物品，奖品将于72小时内充值到用户中奖手机，具体以到账短信为准。仅限当月安卓终端视频通话使用，月底自动失效。',
-        showDesc: false,
-      }, {
-        id: 1002,
-        index: 3,
-        name: '100分钟超清视频通话体验包',
-        image: '',
-        desc: '奖品将于72小时内充值到您的中奖手机，仅限当月安卓终端视频通话使用。奖品可在【我的奖品】查看详情。',
-        prizeDesc: '本奖品为虚拟物品，奖品将于72小时内充值到用户中奖手机，具体以到账短信为准。仅限当月安卓终端视频通话使用，月底自动失效。',
-        showDesc: false,
-      }],
     }
   },
   computed: {
@@ -292,16 +279,28 @@ export default {
     }
   },
   mounted() {
-    this.deg = -1 * (Math.floor(this.rotateDeg/2))
+    if (this.skew) {
+      this.deg = -1 * (Math.floor(this.rotateDeg/2))
+    }
   },
   methods: {
-    doLottery() {
+    go(index) {
+      let prizeIndex = Number(index) + 1
+
+      if (!prizeIndex) {
+        console.warn("请传入中奖奖品在奖品列表中的索引")
+        return
+      }
+      if (prizeIndex >= this.listLength) {
+        console.warn("奖品索引值大于奖品列表数量，请检查")
+        return
+      }
+
       if (this.drawing) return
       this.drawing = true
-      const prizeIndex = Math.ceil(Math.random() * (this.listLength - 1))
       // 上一轮转动角度 + 圈数 + (一圈 - (上一轮奖品索引值 - 本轮奖品索引值) * 奖品角度)
       this.deg =
-        this.deg + 360 * 10 + (360 - (prizeIndex - this.prizeIndex) * this.rotateDeg)
+        this.deg + 360 * 6 + (360 - (prizeIndex - this.prizeIndex) * this.rotateDeg)
       if (this.isFirstMove) {
         this.deg += Math.floor(this.rotateDeg / 2)
         this.isFirstMove = false
@@ -309,8 +308,14 @@ export default {
       this.prizeIndex = prizeIndex
       setTimeout(() => {
         this.drawing = false
+        this.$emit('onend', this.list[index])
       }, 6000)
     },
-  }
+    onDraw() {
+      // const prizeIndex = Math.ceil(Math.random() * this.listLength)
+      // this.go(prizeIndex)
+      this.$emit('onDraw')
+    }
+  },
 }
 </script>

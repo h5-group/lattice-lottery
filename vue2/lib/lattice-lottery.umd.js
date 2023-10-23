@@ -103,6 +103,24 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ }),
 
+/***/ "36a3":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "4878":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _vue2_node_modules_mini_css_extract_plugin_0_9_0_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_vue2_node_modules_css_loader_3_6_0_css_loader_dist_cjs_js_ref_11_oneOf_1_1_vue2_node_modules_vue_loader_15_9_8_vue_loader_lib_loaders_stylePostLoader_js_vue2_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_11_oneOf_1_2_vue2_node_modules_less_loader_6_0_0_less_loader_dist_cjs_js_ref_11_oneOf_1_3_vue2_node_modules_cache_loader_4_1_0_cache_loader_dist_cjs_js_ref_1_0_vue2_node_modules_vue_loader_15_9_8_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("36a3");
+/* harmony import */ var _vue2_node_modules_mini_css_extract_plugin_0_9_0_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_vue2_node_modules_css_loader_3_6_0_css_loader_dist_cjs_js_ref_11_oneOf_1_1_vue2_node_modules_vue_loader_15_9_8_vue_loader_lib_loaders_stylePostLoader_js_vue2_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_11_oneOf_1_2_vue2_node_modules_less_loader_6_0_0_less_loader_dist_cjs_js_ref_11_oneOf_1_3_vue2_node_modules_cache_loader_4_1_0_cache_loader_dist_cjs_js_ref_1_0_vue2_node_modules_vue_loader_15_9_8_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vue2_node_modules_mini_css_extract_plugin_0_9_0_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_vue2_node_modules_css_loader_3_6_0_css_loader_dist_cjs_js_ref_11_oneOf_1_1_vue2_node_modules_vue_loader_15_9_8_vue_loader_lib_loaders_stylePostLoader_js_vue2_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_11_oneOf_1_2_vue2_node_modules_less_loader_6_0_0_less_loader_dist_cjs_js_ref_11_oneOf_1_3_vue2_node_modules_cache_loader_4_1_0_cache_loader_dist_cjs_js_ref_1_0_vue2_node_modules_vue_loader_15_9_8_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+
+
+/***/ }),
+
 /***/ "4c1b":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1179,14 +1197,202 @@ SlotMachine_src.install = function (Vue) {
 });
 
 
-// CONCATENATED MODULE: ./node_modules/_cache-loader@4.1.0@cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"c6bebc22-vue-loader-template"}!./node_modules/_vue-loader@15.9.8@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_cache-loader@4.1.0@cache-loader/dist/cjs.js??ref--1-0!./node_modules/_vue-loader@15.9.8@vue-loader/lib??vue-loader-options!../packages/Turntable/src/index.vue?vue&type=template&id=b979a2d8&
-var srcvue_type_template_id_b979a2d8_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
-var srcvue_type_template_id_b979a2d8_staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',[_vm._v("测试")])])}]
+// CONCATENATED MODULE: ./node_modules/_cache-loader@4.1.0@cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"c6bebc22-vue-loader-template"}!./node_modules/_vue-loader@15.9.8@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_cache-loader@4.1.0@cache-loader/dist/cjs.js??ref--1-0!./node_modules/_vue-loader@15.9.8@vue-loader/lib??vue-loader-options!../packages/Turntable/src/index.vue?vue&type=template&id=cef5e178&
+var srcvue_type_template_id_cef5e178_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"turntable"},[(_vm.tableBg)?_c('div',{class:("turntable__table" + (_vm.drawing ? ' move' : '')),style:({ transform: ("rotate(" + _vm.deg + "deg)"), backgroundImage: ("url('" + _vm.tableBg + "')"), width: (_vm.width + "px"), height: (_vm.width + "px") })}):_c('div',{class:("turntable__container" + (_vm.drawing ? ' move' : '') + (_vm.listLength%2===1?' even':'')),style:({ transform: ("rotate(" + _vm.deg + "deg)"), width: (_vm.width + "px"), height: (_vm.width + "px") })},[_c('div',{staticClass:"turntable__content",style:({width: (_vm.contentWidth + "px"), height: (_vm.contentWidth + "px")})},_vm._l((_vm.list),function(v,i){return _c('div',{key:i,class:("turntable__blade" + (_vm.listLength > 2 ? ' gt2Length' : '')),style:({transform: ("rotateZ(" + ((i+1) * _vm.rotateDeg) + "deg)"), width: (_vm.fanBladeWidth + "px")})},[_c('div',{staticClass:"turntable__prize__name"},[_vm._v(_vm._s(v.label))]),_c('img',{staticClass:"turntable__prize__image",attrs:{"src":v.image,"alt":""}})])}),0),_c('div',{staticClass:"turntable__lights"},_vm._l((_vm.list),function(v,i){return _c('div',{key:i,staticClass:"turntable__light",style:({transform: ("rotateZ(" + ((i+1) * _vm.rotateDeg) + "deg)")})},[_c('div',{staticClass:"turntable__light__dot"})])}),0)]),_c('div',{staticClass:"turntable__btn",on:{"click":_vm.onDraw}})])])}
+var srcvue_type_template_id_cef5e178_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ../packages/Turntable/src/index.vue?vue&type=template&id=b979a2d8&
+// CONCATENATED MODULE: ../packages/Turntable/src/index.vue?vue&type=template&id=cef5e178&
 
 // CONCATENATED MODULE: ./node_modules/_cache-loader@4.1.0@cache-loader/dist/cjs.js??ref--1-0!./node_modules/_vue-loader@15.9.8@vue-loader/lib??vue-loader-options!../packages/Turntable/src/index.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1200,16 +1406,133 @@ var srcvue_type_template_id_b979a2d8_staticRenderFns = [function () {var _vm=thi
 
 /* harmony default export */ var Turntable_srcvue_type_script_lang_js_ = ({
   name: 'Turntable',
+  props: {
+    tableBg: {
+      type: String,
+      default: '',
+    },
+    list: {
+      require: true,
+      type: Array,
+      default: function() {
+        // return [{
+        //   id: 1001,
+        //   label: '奖品1',
+        //   image: '',
+        // }, {
+        //   id: 1002,
+        //   label: '奖品2',
+        //   image: '',
+        // }, {
+        //   id: 1003,
+        //   label: '奖品3',
+        //   image: '',
+        // }, {
+        //   id: 1004,
+        //   label: '奖品4',
+        //   image: '',
+        // }, {
+        //   id: 1005,
+        //   label: '奖品5',
+        //   image: '',
+        // }, {
+        //   id: 1006,
+        //   label: '奖品6',
+        //   image: '',
+        // }]
+        return []
+      }
+    },
+    width: {
+      type: [Number, String],
+      default: 340
+    },
+    skew: {
+      type: Boolean,
+      default: true
+    }
+  },
   data() {
     return {
+      drawing: false,
+      deg: 0,
+      prizeIndex: 0,
+      isFirstMove: true,
+    }
+  },
+  computed: {
+    listLength() {
+      return this.list.length
+    },
+    rotateDeg() {
+      return Number((360/this.listLength).toFixed(2))
+    },
+    contentWidth() {
+      return this.width - 40
+    },
+    fanBladeWidth() {
+      let num = this.listLength            //个数
+      let diameter = this.contentWidth      //转盘直径
+      
+      let width = 0           //扇叶元素宽度
+      let deg = 360 / num     //每一叶的旋转角度
+      
+      width = diameter * Math.tan((deg/2) * Math.PI/180)
+      if (this.listLength > 2) {
+        return width
+        } else {
+        return width > diameter ? diameter : width
+      }
+    }
+  },
+  mounted() {
+    if (this.skew) {
+      this.deg = -1 * (Math.floor(this.rotateDeg/2))
+    }
+  },
+  methods: {
+    go(index) {
+      let prizeIndex = Number(index) + 1
 
+      if (!prizeIndex) {
+        console.warn("请传入中奖奖品在奖品列表中的索引")
+        return
+      }
+      if (prizeIndex >= this.listLength) {
+        console.warn("奖品索引值大于奖品列表数量，请检查")
+        return
+      }
+
+      if (this.drawing) return
+      this.drawing = true
+      // 上一轮转动角度 + 圈数 + (一圈 - (上一轮奖品索引值 - 本轮奖品索引值) * 奖品角度)
+      this.deg =
+        this.deg + 360 * 6 + (360 - (prizeIndex - this.prizeIndex) * this.rotateDeg)
+      if (this.isFirstMove) {
+        this.deg += Math.floor(this.rotateDeg / 2)
+        this.isFirstMove = false
+      }
+      this.prizeIndex = prizeIndex
+      setTimeout(() => {
+        this.drawing = false
+        this.$emit('onend', this.list[index])
+      }, 6000)
+    },
+    onDraw() {
+      // const prizeIndex = Math.ceil(Math.random() * this.listLength)
+      // this.go(prizeIndex)
+      this.$emit('onDraw')
     }
   },
 });
 
 // CONCATENATED MODULE: ../packages/Turntable/src/index.vue?vue&type=script&lang=js&
  /* harmony default export */ var packages_Turntable_srcvue_type_script_lang_js_ = (Turntable_srcvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ../packages/Turntable/src/index.vue?vue&type=style&index=0&lang=less&
+var Turntable_srcvue_type_style_index_0_lang_less_ = __webpack_require__("4878");
+
 // CONCATENATED MODULE: ../packages/Turntable/src/index.vue
+
 
 
 
@@ -1219,8 +1542,8 @@ var srcvue_type_template_id_b979a2d8_staticRenderFns = [function () {var _vm=thi
 
 var Turntable_src_component = normalizeComponent(
   packages_Turntable_srcvue_type_script_lang_js_,
-  srcvue_type_template_id_b979a2d8_render,
-  srcvue_type_template_id_b979a2d8_staticRenderFns,
+  srcvue_type_template_id_cef5e178_render,
+  srcvue_type_template_id_cef5e178_staticRenderFns,
   false,
   null,
   null,
