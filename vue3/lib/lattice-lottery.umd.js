@@ -135,6 +135,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ }),
 
+/***/ "56e2":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "79e4":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -286,6 +293,17 @@ exports.default = (sfc, props) => {
 
 /***/ }),
 
+/***/ "d7f9":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _vue3_node_modules_mini_css_extract_plugin_0_9_0_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_vue3_node_modules_css_loader_3_6_0_css_loader_dist_cjs_js_ref_11_oneOf_1_1_vue3_node_modules_vue_loader_16_8_3_vue_loader_dist_stylePostLoader_js_vue3_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_11_oneOf_1_2_vue3_node_modules_less_loader_6_2_0_less_loader_dist_cjs_js_ref_11_oneOf_1_3_vue3_node_modules_cache_loader_4_1_0_cache_loader_dist_cjs_js_ref_1_0_vue3_node_modules_vue_loader_16_8_3_vue_loader_dist_index_js_ref_1_1_index_vue_vue_type_style_index_0_id_cef5e178_lang_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("56e2");
+/* harmony import */ var _vue3_node_modules_mini_css_extract_plugin_0_9_0_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_vue3_node_modules_css_loader_3_6_0_css_loader_dist_cjs_js_ref_11_oneOf_1_1_vue3_node_modules_vue_loader_16_8_3_vue_loader_dist_stylePostLoader_js_vue3_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_11_oneOf_1_2_vue3_node_modules_less_loader_6_2_0_less_loader_dist_cjs_js_ref_11_oneOf_1_3_vue3_node_modules_cache_loader_4_1_0_cache_loader_dist_cjs_js_ref_1_0_vue3_node_modules_vue_loader_16_8_3_vue_loader_dist_index_js_ref_1_1_index_vue_vue_type_style_index_0_id_cef5e178_lang_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vue3_node_modules_mini_css_extract_plugin_0_9_0_mini_css_extract_plugin_dist_loader_js_ref_11_oneOf_1_0_vue3_node_modules_css_loader_3_6_0_css_loader_dist_cjs_js_ref_11_oneOf_1_1_vue3_node_modules_vue_loader_16_8_3_vue_loader_dist_stylePostLoader_js_vue3_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_11_oneOf_1_2_vue3_node_modules_less_loader_6_2_0_less_loader_dist_cjs_js_ref_11_oneOf_1_3_vue3_node_modules_cache_loader_4_1_0_cache_loader_dist_cjs_js_ref_1_0_vue3_node_modules_vue_loader_16_8_3_vue_loader_dist_index_js_ref_1_1_index_vue_vue_type_style_index_0_id_cef5e178_lang_less__WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+
+
+/***/ }),
+
 /***/ "e12d":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -315,6 +333,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, "LotteryGrid", function() { return /* reexport */ lottery_grid; });
 __webpack_require__.d(__webpack_exports__, "LotteryList", function() { return /* reexport */ lottery_list; });
 __webpack_require__.d(__webpack_exports__, "SlotMachine", function() { return /* reexport */ SlotMachine_src; });
+__webpack_require__.d(__webpack_exports__, "Turntable", function() { return /* reexport */ Turntable_src; });
 
 // CONCATENATED MODULE: ./node_modules/_@vue_cli-service@4.5.15@@vue/cli-service/lib/commands/build/setPublicPath.js
 // This file is imported into lib/wc client bundles.
@@ -1085,7 +1104,226 @@ SlotMachine_src.install = function (Vue) {
 });
 
 
+// CONCATENATED MODULE: ./node_modules/_vue-loader@16.8.3@vue-loader/dist/templateLoader.js??ref--5!./node_modules/_cache-loader@4.1.0@cache-loader/dist/cjs.js??ref--1-0!./node_modules/_vue-loader@16.8.3@vue-loader/dist??ref--1-1!../packages/Turntable/src/index.vue?vue&type=template&id=cef5e178
+
+
+const srcvue_type_template_id_cef5e178_hoisted_1 = { class: "turntable" }
+const srcvue_type_template_id_cef5e178_hoisted_2 = { class: "turntable__prize__name" }
+const srcvue_type_template_id_cef5e178_hoisted_3 = ["src"]
+const srcvue_type_template_id_cef5e178_hoisted_4 = { class: "turntable__lights" }
+const srcvue_type_template_id_cef5e178_hoisted_5 = /*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("div", { class: "turntable__light__dot" }, null, -1)
+const _hoisted_6 = [
+  srcvue_type_template_id_cef5e178_hoisted_5
+]
+
+function srcvue_type_template_id_cef5e178_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("div", null, [
+    Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("div", srcvue_type_template_id_cef5e178_hoisted_1, [
+      ($props.tableBg)
+        ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("div", {
+            key: 0,
+            class: Object(external_commonjs_vue_commonjs2_vue_root_Vue_["normalizeClass"])(`turntable__table${$data.drawing ? ' move' : ''}`),
+            style: Object(external_commonjs_vue_commonjs2_vue_root_Vue_["normalizeStyle"])({ transform: `rotate(${$data.deg}deg)`, backgroundImage: `url('${$props.tableBg}')`, width: `${$props.width}px`, height: `${$props.width}px` })
+          }, null, 6))
+        : (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("div", {
+            key: 1,
+            class: Object(external_commonjs_vue_commonjs2_vue_root_Vue_["normalizeClass"])(`turntable__container${$data.drawing ? ' move' : ''}${$options.listLength%2===1?' even':''}`),
+            style: Object(external_commonjs_vue_commonjs2_vue_root_Vue_["normalizeStyle"])({ transform: `rotate(${$data.deg}deg)`, width: `${$props.width}px`, height: `${$props.width}px` })
+          }, [
+            Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("div", {
+              class: "turntable__content",
+              style: Object(external_commonjs_vue_commonjs2_vue_root_Vue_["normalizeStyle"])({width: `${$options.contentWidth}px`, height: `${$options.contentWidth}px`})
+            }, [
+              (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(true), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])(external_commonjs_vue_commonjs2_vue_root_Vue_["Fragment"], null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderList"])($props.list, (v, i) => {
+                return (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("div", {
+                  key: i,
+                  style: Object(external_commonjs_vue_commonjs2_vue_root_Vue_["normalizeStyle"])({transform: `rotateZ(${(i+1) * $options.rotateDeg}deg)`, width: `${$options.fanBladeWidth}px`}),
+                  class: Object(external_commonjs_vue_commonjs2_vue_root_Vue_["normalizeClass"])(`turntable__blade${$options.listLength > 2 ? ' gt2Length' : ''}`)
+                }, [
+                  Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("div", srcvue_type_template_id_cef5e178_hoisted_2, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(v.label), 1),
+                  Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("img", {
+                    src: v.image,
+                    class: "turntable__prize__image",
+                    alt: ""
+                  }, null, 8, srcvue_type_template_id_cef5e178_hoisted_3)
+                ], 6))
+              }), 128))
+            ], 4),
+            Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("div", srcvue_type_template_id_cef5e178_hoisted_4, [
+              (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(true), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])(external_commonjs_vue_commonjs2_vue_root_Vue_["Fragment"], null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderList"])($props.list, (v, i) => {
+                return (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("div", {
+                  key: i,
+                  style: Object(external_commonjs_vue_commonjs2_vue_root_Vue_["normalizeStyle"])({transform: `rotateZ(${(i+1) * $options.rotateDeg}deg)`}),
+                  class: "turntable__light"
+                }, _hoisted_6, 4))
+              }), 128))
+            ])
+          ], 6)),
+      Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("div", {
+        class: "turntable__btn",
+        onClick: _cache[0] || (_cache[0] = (...args) => ($options.onDraw && $options.onDraw(...args)))
+      })
+    ])
+  ]))
+}
+// CONCATENATED MODULE: ../packages/Turntable/src/index.vue?vue&type=template&id=cef5e178
+
+// CONCATENATED MODULE: ./node_modules/_cache-loader@4.1.0@cache-loader/dist/cjs.js??ref--1-0!./node_modules/_vue-loader@16.8.3@vue-loader/dist??ref--1-1!../packages/Turntable/src/index.vue?vue&type=script&lang=js
+
+/* harmony default export */ var Turntable_srcvue_type_script_lang_js = ({
+  name: 'Turntable',
+  props: {
+    tableBg: {
+      type: String,
+      default: '',
+    },
+    list: {
+      require: true,
+      type: Array,
+      default: function() {
+        // return [{
+        //   id: 1001,
+        //   label: '奖品1',
+        //   image: '',
+        // }, {
+        //   id: 1002,
+        //   label: '奖品2',
+        //   image: '',
+        // }, {
+        //   id: 1003,
+        //   label: '奖品3',
+        //   image: '',
+        // }, {
+        //   id: 1004,
+        //   label: '奖品4',
+        //   image: '',
+        // }, {
+        //   id: 1005,
+        //   label: '奖品5',
+        //   image: '',
+        // }, {
+        //   id: 1006,
+        //   label: '奖品6',
+        //   image: '',
+        // }]
+        return []
+      }
+    },
+    width: {
+      type: [Number, String],
+      default: 340
+    },
+    skew: {
+      type: Boolean,
+      default: true
+    }
+  },
+  data() {
+    return {
+      drawing: false,
+      deg: 0,
+      prizeIndex: 0,
+      isFirstMove: true,
+    }
+  },
+  computed: {
+    listLength() {
+      return this.list.length
+    },
+    rotateDeg() {
+      return Number((360/this.listLength).toFixed(2))
+    },
+    contentWidth() {
+      return this.width - 40
+    },
+    fanBladeWidth() {
+      let num = this.listLength            //个数
+      let diameter = this.contentWidth      //转盘直径
+      
+      let width = 0           //扇叶元素宽度
+      let deg = 360 / num     //每一叶的旋转角度
+      
+      width = diameter * Math.tan((deg/2) * Math.PI/180)
+      if (this.listLength > 2) {
+        return width
+        } else {
+        return width > diameter ? diameter : width
+      }
+    }
+  },
+  mounted() {
+    if (this.skew) {
+      this.deg = -1 * (Math.floor(this.rotateDeg/2))
+    }
+  },
+  methods: {
+    go(index) {
+      let prizeIndex = Number(index) + 1
+
+      if (!prizeIndex) {
+        console.warn("请传入中奖奖品在奖品列表中的索引")
+        return
+      }
+      if (prizeIndex >= this.listLength) {
+        console.warn("奖品索引值大于奖品列表数量，请检查")
+        return
+      }
+
+      if (this.drawing) return
+      this.drawing = true
+      // 上一轮转动角度 + 圈数 + (一圈 - (上一轮奖品索引值 - 本轮奖品索引值) * 奖品角度)
+      this.deg =
+        this.deg + 360 * 6 + (360 - (prizeIndex - this.prizeIndex) * this.rotateDeg)
+      if (this.isFirstMove) {
+        this.deg += Math.floor(this.rotateDeg / 2)
+        this.isFirstMove = false
+      }
+      this.prizeIndex = prizeIndex
+      setTimeout(() => {
+        this.drawing = false
+        this.$emit('onend', this.list[index])
+      }, 6000)
+    },
+    onDraw() {
+      // const prizeIndex = Math.ceil(Math.random() * this.listLength)
+      // this.go(prizeIndex)
+      this.$emit('onDraw')
+    }
+  },
+});
+
+// CONCATENATED MODULE: ../packages/Turntable/src/index.vue?vue&type=script&lang=js
+ 
+// EXTERNAL MODULE: ../packages/Turntable/src/index.vue?vue&type=style&index=0&id=cef5e178&lang=less
+var srcvue_type_style_index_0_id_cef5e178_lang_less = __webpack_require__("d7f9");
+
+// CONCATENATED MODULE: ../packages/Turntable/src/index.vue
+
+
+
+
+
+
+
+const Turntable_src_exports_ = /*#__PURE__*/exportHelper_default()(Turntable_srcvue_type_script_lang_js, [['render',srcvue_type_template_id_cef5e178_render]])
+
+/* harmony default export */ var Turntable_src = (Turntable_src_exports_);
+// CONCATENATED MODULE: ../packages/Turntable/index.js
+
+
+// 为组件提供 install 安装方法，供按需引入
+Turntable_src.install = function (Vue) {
+  Vue.component(Turntable_src.name, Turntable_src)
+}
+
+/* harmony default export */ var Turntable = ({
+  Turntable: Turntable_src,
+});
+
+
 // CONCATENATED MODULE: ../packages/index.js
+
+
 
 
 
@@ -1095,6 +1333,7 @@ const components = [
   lottery_grid,
   lottery_list,
   SlotMachine_src,
+  Turntable_src,
 ]
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，那么所有的组件都会被注册
@@ -1119,6 +1358,7 @@ if (typeof window !== 'undefined' && window.Vue) {
   LotteryGrid: lottery_grid,
   LotteryList: lottery_list,
   SlotMachine: SlotMachine_src,
+  Turntable: Turntable_src,
 });
 // CONCATENATED MODULE: ./node_modules/_@vue_cli-service@4.5.15@@vue/cli-service/lib/commands/build/entry-lib.js
 

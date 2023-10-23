@@ -115,6 +115,11 @@
       <!-- 按钮 -->
       <div @click="machineGo" class="btn">抽奖</div>
     </div>
+    
+    <!-- 大转盘 -->
+    <div>
+      <turntable ref="turntable" class="myTurntable" :width="340" :list="list.slice(0, 4)" @onDraw="request('turntable')" @onend="onend" />
+    </div>
   </div>
 </template>
 <script>
@@ -151,7 +156,7 @@ export default {
           label: "8等奖",
         },
         {
-          // label: "9等奖",
+          label: "9等奖",
           image: logo,
         },
       ],

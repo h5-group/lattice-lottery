@@ -12,8 +12,9 @@ import App from './App.vue'
 import {
   LotteryGrid,
   LotteryList,
-  SlotMachine
+  SlotMachine,
+  Turntable,
 } from '../lib/lattice-lottery.umd.min'
 import '../lib/lattice-lottery.css'
 
-createApp(App).use(LotteryGrid).use(LotteryList).use(SlotMachine).mount('#app')
+createApp(App).use(LotteryGrid).use(LotteryList).use(SlotMachine).use(Turntable).mount('#app')
