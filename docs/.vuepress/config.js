@@ -34,7 +34,9 @@ module.exports = {
       myDialog.className = 'myDialog'
       myDialog.innerHTML = myDialogHtml
 
-      document.body.appendChild(myDialog)
+      setTimeout(function() {
+        document.body.appendChild(myDialog)
+      }, 100)
     `],
     ['style', {}, `
       .myDialog{

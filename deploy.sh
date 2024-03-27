@@ -20,6 +20,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:h5-group/lattice-lottery.github.io.git docs
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:h5-group/lattice-lottery.git master:gh-pages
+git push -f https://github.com/h5-group/lattice-lottery.git master:gh-pages
 
 cd -
