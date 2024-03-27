@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>快速开始 | lattice-lottery</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?d98e51720ec70609a3d5998161b75bab";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+      </script>
+    <script>
+      var myDialogHtml = 
+        '<div class="myDialog-content">' +
+        '  <div>该组件已弃用，请向往查看最新的组件文档。</div>' +
+        '  <div>' +
+        '    <a href="https://qweaa.github.io/lattice-lottery-new/?from=old">lattice-lottery-new</a>' +
+        '  </div>' +
+        '  <div>感谢您的支持~</div>' +
+        '  <div>' +
+        '    <a href="https://qweaa.github.io/lattice-lottery-new/?from=old" class="myDialog-btn">Go~</a>' +
+        '  </div>' +
+        '</div>'
+      var myDialog = document.createElement("div")
+      myDialog.className = 'myDialog'
+      myDialog.innerHTML = myDialogHtml
+
+      setTimeout(function() {
+        document.body.appendChild(myDialog)
+      }, 100)
+    </script>
+    <style>
+      .myDialog{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+      }
+      .myDialog-content {
+        width: 360px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 14px;
+        color: #666;
+        background-color: white;
+        border-radius: 6px;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .myDialog-content > div {
+        margin-bottom: 16px;
+      }
+      .myDialog-btn {
+        display: block;
+        width: 120px;
+        height: 32px;
+        text-align: center;
+        background-color: #67C23A;
+        color: white;
+        border-radius: 4px;
+        line-height: 32px;
+        text-decoration: none;
+      }
+    </style>
+    <meta name="description" content="基于Vue的九宫格抽奖组件">
+    
+    <link rel="preload" href="/lattice-lottery/assets/css/0.styles.660b7c8a.css" as="style"><link rel="preload" href="/lattice-lottery/assets/js/app.657120a8.js" as="script"><link rel="preload" href="/lattice-lottery/assets/js/2.0f8df9de.js" as="script"><link rel="preload" href="/lattice-lottery/assets/js/5.14d30ba7.js" as="script"><link rel="prefetch" href="/lattice-lottery/assets/js/10.f79845a9.js"><link rel="prefetch" href="/lattice-lottery/assets/js/11.14fd9428.js"><link rel="prefetch" href="/lattice-lottery/assets/js/12.623b5996.js"><link rel="prefetch" href="/lattice-lottery/assets/js/13.c0b7907b.js"><link rel="prefetch" href="/lattice-lottery/assets/js/14.277809f0.js"><link rel="prefetch" href="/lattice-lottery/assets/js/15.c097fc8a.js"><link rel="prefetch" href="/lattice-lottery/assets/js/16.ff550da1.js"><link rel="prefetch" href="/lattice-lottery/assets/js/17.92ff726e.js"><link rel="prefetch" href="/lattice-lottery/assets/js/18.3b473a0a.js"><link rel="prefetch" href="/lattice-lottery/assets/js/19.02c037b9.js"><link rel="prefetch" href="/lattice-lottery/assets/js/20.fab62f22.js"><link rel="prefetch" href="/lattice-lottery/assets/js/3.c2b1d2ac.js"><link rel="prefetch" href="/lattice-lottery/assets/js/4.44d48494.js"><link rel="prefetch" href="/lattice-lottery/assets/js/6.e11e16c0.js"><link rel="prefetch" href="/lattice-lottery/assets/js/7.a2180acb.js"><link rel="prefetch" href="/lattice-lottery/assets/js/8.7da9eb23.js"><link rel="prefetch" href="/lattice-lottery/assets/js/9.38b39c05.js">
+    <link rel="stylesheet" href="/lattice-lottery/assets/css/0.styles.660b7c8a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/lattice-lottery/" class="home-link router-link-active"><!----> <span class="site-name">lattice-lottery</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/lattice-lottery/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/lattice-lottery/demo/" class="nav-link">
+  Demo
+</a></div><div class="nav-item"><a href="https://github.com/h5-group/lattice-lottery" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/lattice-lottery/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/lattice-lottery/demo/" class="nav-link">
+  Demo
+</a></div><div class="nav-item"><a href="https://github.com/h5-group/lattice-lottery" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/lattice-lottery/guide/" aria-current="page" class="sidebar-link">指南</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/#介绍" class="sidebar-link">介绍</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/#移动端自适应页面怎么办" class="sidebar-link">移动端自适应页面怎么办？</a></li></ul></li><li><a href="/lattice-lottery/guide/start.html" aria-current="page" class="active sidebar-link">快速开始</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/start.html#安装" class="sidebar-link">安装</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/start.html#注册" class="sidebar-link">注册</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/start.html#使用" class="sidebar-link">使用</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/start.html#效果图" class="sidebar-link">效果图</a></li></ul></li><li><a href="/lattice-lottery/guide/introduce.html" class="sidebar-link">钩子</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/introduce.html#确定抽奖-onsubmit" class="sidebar-link">确定抽奖（onsubmit）</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/introduce.html#开始-go" class="sidebar-link">开始 （go）</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/introduce.html#动画开始-onstart" class="sidebar-link">动画开始（onstart）</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/introduce.html#错误-onerror" class="sidebar-link">错误（onerror）</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/introduce.html#动画结束-onend" class="sidebar-link">动画结束（onend）</a></li></ul></li><li><a href="/lattice-lottery/guide/option.html" class="sidebar-link">配置参数</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/option.html#九宫格抽奖" class="sidebar-link">九宫格抽奖</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/option.html#老虎机" class="sidebar-link">老虎机</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/option.html#大转盘" class="sidebar-link">大转盘</a></li></ul></li><li><a href="/lattice-lottery/guide/version.html" class="sidebar-link">版本日志</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/version.html#current-tags" class="sidebar-link">Current Tags</a></li><li class="sidebar-sub-header"><a href="/lattice-lottery/guide/version.html#version-history" class="sidebar-link">Version History</a></li></ul></li><li><a href="/lattice-lottery/guide/contact.html" class="sidebar-link">联系和反馈</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="快速开始"><a href="#快速开始" class="header-anchor">#</a> 快速开始</h1> <p>直接开始</p> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <div class="language-sh extra-class"><pre class="language-sh"><code>
+<span class="token comment"># vue2</span>
+<span class="token function">npm</span> <span class="token function">install</span> lattice-lottery <span class="token parameter variable">--save</span>
+
+<span class="token comment"># vue3</span>
+<span class="token function">npm</span> <span class="token function">install</span> lattice-lottery-plus <span class="token parameter variable">--save</span>
+
+</code></pre></div><h2 id="注册"><a href="#注册" class="header-anchor">#</a> 注册</h2> <ul><li>vue2项目</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token comment">// vue2 main.js</span>
+<span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  LotteryGrid<span class="token punctuation">,</span>
+  LotteryList<span class="token punctuation">,</span>
+  SlotMachine
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'lattice-lottery'</span>
+<span class="token keyword">import</span> <span class="token string">'lattice-lottery/lib/lattice-lottery.css'</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>LotteryGrid<span class="token punctuation">)</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>LotteryList<span class="token punctuation">)</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>SlotMachine<span class="token punctuation">)</span>
+
+</code></pre></div><ul><li>vue3项目</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token comment">// vue3 main.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createApp <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App.vue'</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  LotteryGrid<span class="token punctuation">,</span>
+  LotteryList<span class="token punctuation">,</span>
+  SlotMachine
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'lattice-lottery-plus'</span>
+<span class="token keyword">import</span> <span class="token string">'lattice-lottery-plus/lib/lattice-lottery.css'</span>
+
+<span class="token function">createApp</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>LotteryGrid<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>LotteryList<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>SlotMachine<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">mount</span><span class="token punctuation">(</span><span class="token string">'#app'</span><span class="token punctuation">)</span>
+
+</code></pre></div><h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <p>参考Demo文档 <a href="/lattice-lottery/demo">传送门</a></p> <h2 id="效果图"><a href="#效果图" class="header-anchor">#</a> 效果图</h2> <p>lottery-grid</p> <img src="/lattice-lottery/assets/img/lattice_lottery_logo.8e533cba.png" style="width:330px;"> <p>lottery-list</p> <img src="/lattice-lottery/assets/img/lottery_list.1b82f99e.png" style="width:330px;"> <p>slot-machine</p> <img src="data:image/png;base64,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" style="width:520px;"></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/lattice-lottery/guide/" class="prev router-link-active">
+        指南
+      </a></span> <span class="next"><a href="/lattice-lottery/guide/introduce.html">
+        钩子
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/lattice-lottery/assets/js/app.657120a8.js" defer></script><script src="/lattice-lottery/assets/js/2.0f8df9de.js" defer></script><script src="/lattice-lottery/assets/js/5.14d30ba7.js" defer></script>
+  </body>
+</html>
